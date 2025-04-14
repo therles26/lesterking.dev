@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lester King G. Padrid - Web Developer Portfolio</title>
+  <style>
+    /* General Styling */
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f6f9;
+      color: #333;
+      line-height: 1.6;
+      box-sizing: border-box;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      background: white;
+      padding: 40px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    h1, h2, h3 {
+      color: #2c3e50;
+      font-weight: 600;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .skills span {
+      display: inline-block;
+      background: #3498db;
+      color: white;
+      padding: 8px 15px;
+      margin: 5px;
+      border-radius: 30px;
+      font-size: 14px;
+      transition: transform 0.3s ease;
+    }
+
+    .skills span:hover {
+      transform: scale(1.1);
+    }
+
+    .project {
+      margin-bottom: 25px;
+      padding: 20px;
+      background: #ecf0f1;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .project:hover {
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .project-title {
+      font-weight: bold;
+      font-size: 22px;
+      color: #2980b9;
+      margin-bottom: 10px;
+    }
+
+    .contact a {
+      color: #2980b9;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .contact a:hover {
+      color: #1abc9c;
+    }
+
+    .section ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .section ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 14px;
+      color: #7f8c8d;
+    }
+
+    /* Navigation Bar */
+    nav {
+      background-color: #3498db;
+      padding: 15px 0;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 15px 20px;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+      display: inline-block;
+    }
+
+    nav a:hover {
+      background-color: #2980b9;
+      border-radius: 5px;
+    }
+
+    /* Layout Styling */
+    header {
+      margin-top: 100px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 36px;
+      color: #34495e;
+    }
+
+    header p {
+      font-size: 18px;
+      color: #7f8c8d;
+    }
+
+    /* Section for the About Me */
+    #about {
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    #about:hover {
+      transform: translateY(-10px);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .container {
+        padding: 20px;
+      }
+
+      nav a {
+        font-size: 14px;
+        padding: 8px 15px;
+      }
+
+      .skills span {
+        font-size: 12px;
+        padding: 5px 10px;
+      }
+
+      .project-title {
+        font-size: 18px;
+      }
+
+      header h1 {
+        font-size: 28px;
+      }
+
+      header p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="#about">About Me</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="container">
+    <header class="section">
+      <!-- <div style="text-align: center;">
+        <img src="profile.jpg" alt="Lester King G. Padrid" style="width: 150px; height: 150px; border-radius: 50%; margin-bottom: 20px;">
+      </div> -->
+      <h1 style="text-align: center;">Lester King G. Padrid</h1>
+      <p style="text-align: center;">Web Developer</p>
+      <div class="contact" style="text-align: center;">
+        <p>Email: <a href="mailto:Therles26@yahoo.com">Therles26@yahoo.com</a> | Phone: 09272324478</p>
+        <p>GitHub: <a href="https://github.com/therles26" target="_blank">github.com/therles26</a> | LinkedIn: <a href="https://linkedin.com/in/juan" target="_blank">linkedin.com/in/juan</a></p>
+      </div>
+    </header>
+    
+
+    <!-- About Me Section -->
+    <section class="section" id="about">
+      <h2>About Me</h2>
+      <p>I’m a passionate web developer with experience in building modern web apps using Laravel, Vue.js, and Quasar. I enjoy creating clean, responsive interfaces and scalable backend systems. My goal is to build applications that provide valuable solutions to real-world problems.</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section" id="skills">
+      <h2>Skills</h2>
+      <div class="skills">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Vue.js</span>
+        <span>Quasar</span>
+        <span>Laravel</span>
+        <span>MySQL</span>
+        <span>Git</span>
+        <span>REST API</span>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+      <h2>Projects</h2>
+      <div class="project">
+        <div class="project-title">Inventory Management System</div>
+        <p>A web-based inventory tracking system built with Laravel + Vue. Includes user roles, stock monitoring, and PDF reporting features.</p>
+      </div>
+      <div class="project">
+        <div class="project-title">Inventory System</div>
+        <p>Developed for a telecom company, managing inventory like modems, routers, and cables. Built with Quasar Framework.</p>
+      </div>
+      <div class="project">
+        <div class="project-title">Marketing System</div>
+        <p>A mobile and web-based system for managing furniture products, including proforma invoices, product specs, and job orders.</p>
+      </div>
+      <div class="project">
+        <div class="project-title">Device Geo-tagging System</div>
+        <p>Tracking telecom devices like fiber optics and routers, with integrated location-based services.</p>
+      </div>
+      <div class="project">
+        <div class="project-title">Company System</div>
+        <p>A system for handling telecom operations and collections efficiently.</p>
+      </div>
+      <div class="project">
+        <div class="project-title">Voucher System Website</div>
+        <p>Personal website to showcase skills, blogs, and client testimonials. Built using Quasar Framework.</p>
+      </div>
+      <div class="project">
+        <div class="project-title">Freelance Portfolio Website</div>
+        <p>Personal website to showcase skills, blogs, and client testimonials. Built using Quasar Framework.</p>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section" id="experience">
+      <h2>Experience</h2>
+      <p><strong>Frontend Developer</strong> - Freelance (2023 - Present)</p>
+      <ul>
+        <li>Built responsive websites for small businesses.</li>
+        <li>Integrated APIs, improved page speed, and maintained SEO standards.</li>
+      </ul>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section" id="education">
+      <h2>Education</h2>
+      <p><strong>Bachelor of Science in Information Technology</strong><br/>Nueva Ecija University of Science and Technology</p>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer" id="contact">
+      <p>Thank you for reviewing my portfolio. I’m open to freelance or full-time opportunities!</p>
+    </footer>
+  </div>
+</body>
+</html>
