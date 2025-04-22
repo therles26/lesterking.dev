@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Lester King G. Padrid - Web Developer Portfolio</title>
   <style>
-
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
@@ -18,12 +17,11 @@
 
     .container {
       max-width: 1100px;
-      margin: 40px auto;
+      margin: 100px auto 40px;
       background: white;
       padding: 40px;
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
       border-radius: 8px;
-      overflow: hidden;
     }
 
     h1, h2, h3 {
@@ -96,7 +94,6 @@
       color: #7f8c8d;
     }
 
-
     nav {
       background-color: #3498db;
       padding: 15px 0;
@@ -123,9 +120,7 @@
       border-radius: 5px;
     }
 
-    /* Layout Styling */
     header {
-      margin-top: 100px;
       text-align: center;
     }
 
@@ -139,7 +134,6 @@
       color: #7f8c8d;
     }
 
-    /* Section for the About Me */
     #about {
       background: #ffffff;
       padding: 40px;
@@ -152,7 +146,6 @@
       transform: translateY(-10px);
     }
 
-    /* Responsive Design */
     @media (max-width: 768px) {
       .container {
         padding: 20px;
@@ -194,137 +187,129 @@
   </nav>
 
   <div class="container">
+    <!-- Header -->
     <header class="section" id="about">
-      <!-- <div style="text-align: center;">
-        <img src="profile.jpg" alt="Lester King G. Padrid" style="width: 150px; height: 150px; border-radius: 50%; margin-bottom: 20px;">
-      </div> -->
-      <h1 style="text-align: center;">Lester King G. Padrid</h1>
-      <p style="text-align: center;">Web Developer</p>
-      <div class="contact" style="text-align: center;">
+      <h1>Lester King G. Padrid</h1>
+      <p>Web Developer</p>
+      <div class="contact">
         <p>Email: <a href="mailto:Therles26@yahoo.com">Therles26@yahoo.com</a> | Phone: 09272324478</p>
         <p>GitHub: <a href="https://github.com/therles26" target="_blank">github.com/therles26</a></p>
       </div>
     </header>
-     
 
-    <!-- About Me Section -->
+    <!-- About Me -->
     <section class="section" id="skills">
       <h2>About Me</h2>
-      <p>I’m a passionate web developer with experience in building modern web apps using Laravel, Vue.js, and Quasar. I enjoy creating clean, responsive interfaces and scalable backend systems. My goal is to build applications that provide valuable solutions to real-world problems.</p>
+      <p>I’m a passionate web developer with experience building modern web applications using Laravel, Vue.js, and the Quasar framework. I enjoy creating clean, responsive interfaces and scalable backend systems. My goal is to build applications that deliver real value and solve real-world problems.</p>
     </section>
 
-    <!-- Skills Section -->
+    <!-- Skills -->
     <section class="section" id="projects">
       <h2>Skills</h2>
       <div class="skills">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-         <span>TypeScript</span>
-        <span>Vue.js</span>
-        <span>Quasar</span>
-        <span>PHP</span>
-        <span>Laravel</span>
-        <span>MySQL</span>
-        <span>Git</span>
-        <span>REST API</span>
+        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>TypeScript</span>
+        <span>Vue.js</span><span>Quasar</span><span>PHP</span><span>Laravel</span>
+        <span>MySQL</span><span>Git</span><span>REST API</span>
       </div>
     </section>
 
-    <!-- Projects Section -->
-    <section class="section" >
+    <!-- Projects -->
+    <section class="section">
       <h2>Projects</h2>
-     <div class="project">
+
+      <!-- Each project wrapped in an article -->
+      <article class="project">
         <h3 class="project-title">Inventory Tracking System – Web, Windows, and Android Application</h3>
-        <div class="project-details">Nov 2024 - Mar 2025 | Associated with Calfurn Manufacturing Philippines, Inc.</div>
-        <p>A multi-platform Inventory Management System built with Laravel and Vue.js (Quasar Framework), featuring role management, real-time monitoring, transaction tracking, purchase order modules, material conversions, transfer orders, QR code integration, and comprehensive reporting. Designed for desktops, tablets, and mobile devices.</p>
-        <div class="skills">Skills: HTML, JavaScript, Laravel Framework, MySQL, PHP, Quasar Framework, REST APIs, SQL, TypeScript, Vue.js</div>
-      </div>
+        <div class="project-details">Nov 2024 - Mar 2025 | Calfurn Manufacturing Philippines, Inc.</div>
+        <p>A cross-platform inventory management system using Laravel and Vue.js (Quasar Framework). Features include role management, real-time monitoring, transaction tracking, purchase orders, material conversions, QR code integration, and reporting.</p>
+        <div class="skills">Skills: HTML, JavaScript, Laravel, MySQL, PHP, Quasar, REST APIs, SQL, TypeScript, Vue.js</div>
+      </article>
 
-      <div class="project">
+      <article class="project">
         <h3 class="project-title">Marketing System</h3>
-        <div class="project-details">Jun 2024 - Oct 2024 | Associated with Calfurn Manufacturing Philippines, Inc.</div>
-        <p>A mobile and web-based system for managing furniture products, handling proforma invoices, product specifications, and job orders.</p>
-        <div class="skills">Skills: HTML, JavaScript, Laravel Framework, MySQL, PHP, Quasar Framework, REST APIs, SQL, TypeScript, Vue.js, CSS</div>
-      </div>
+        <div class="project-details">Jun 2024 - Oct 2024 | Calfurn Manufacturing Philippines, Inc.</div>
+        <p>A web and mobile system for managing furniture products, proforma invoices, product specs, and job orders.</p>
+        <div class="skills">Skills: HTML, JavaScript, Laravel, MySQL, PHP, Quasar, REST APIs, SQL, TypeScript, Vue.js, CSS</div>
+      </article>
 
-      <div class="project">
+      <article class="project">
         <h3 class="project-title">Material Inventory - Telecommunication Company</h3>
         <div class="project-details">May 2023 - Aug 2023</div>
-        <p>A web-based Material Inventory system developed for a Telecommunication company, featuring role-based management, real-time monitoring, stock transactions, material transfer support, and comprehensive reporting, built using PHP, HTML, CSS, JavaScript, and MySQL.</p>
-        <div class="skills">Skills: CSS, HTML, JavaScript, Laravel Framework, PHP, MySQL, SQL, jQuery</div>
-      </div>
+        <p>A web-based inventory system with role-based access, real-time stock updates, transaction handling, and detailed reports, built with PHP and MySQL.</p>
+        <div class="skills">Skills: CSS, HTML, JavaScript, Laravel, PHP, MySQL, SQL, jQuery</div>
+      </article>
 
-      <div class="project">
+      <article class="project">
         <h3 class="project-title">Geo Tagging System</h3>
-        <div class="project-details">May 2022 - Oct 2022 | Associated with R.A. Omega Cable TV Corporation</div>
-        <p>A system for tracking telecom devices such as fiber optics and routers, integrated with location-based services.</p>
-        <div class="skills">Skills: Laravel Framework, HTML, JavaScript, MySQL, PHP, SQL, CSS, jQuery</div>
-      </div>
+        <div class="project-details">May 2022 - Oct 2022 | R.A. Omega Cable TV Corporation</div>
+        <p>A location-based system to track telecom equipment like routers and fiber optic lines.</p>
+        <div class="skills">Skills: Laravel, HTML, JavaScript, MySQL, PHP, SQL, CSS, jQuery</div>
+      </article>
 
-      <div class="project">
+      <article class="project">
         <h3 class="project-title">Less2More System - Internal Wallet & Credit System</h3>
         <div class="project-details">Jan 2022 - Feb 2022</div>
-        <p>A custom non-banking payment simulation platform with a points-based wallet and credit system, supporting transaction history, admin control, and reward redemption in a closed ecosystem.</p>
+        <p>A points-based wallet and internal credit system supporting transaction logs, admin features, and rewards in a closed ecosystem.</p>
         <div class="skills">Skills: HTML, CSS, JavaScript, MySQL, PHP, SQL</div>
-      </div>
+      </article>
 
-      <div class="project">
+      <article class="project">
         <h3 class="project-title">Online Suggestion and Recommendation System</h3>
         <div class="project-details">Feb 2021 - Mar 2021 | Freelance Job</div>
-        <p>An online system designed to gather and manage user suggestions and recommendations efficiently.</p>
+        <p>A system to collect, review, and manage user suggestions and feedback efficiently.</p>
         <div class="skills">Skills: HTML, MySQL, JavaScript, CSS, PHP, SQL</div>
-      </div>
+      </article>
 
-      <div class="project">
+      <article class="project">
         <h3 class="project-title">Guidance Management System</h3>
         <div class="project-details">Mar 2020 - Apr 2020</div>
-        <p>A computerized system to help guidance counselors manage student data, counseling sessions, and reports, streamlining the entire counseling process.</p>
+        <p>A system for managing student guidance records, session logs, and counselor reports.</p>
         <div class="skills">Skills: HTML, JavaScript, PHP, MySQL, SQL, CSS</div>
-      </div>
+      </article>
 
-      <div class="project">
+      <article class="project">
         <h3 class="project-title">Hotel Reservation System</h3>
-        <div class="project-details">Sep 2017 - Mar 2018 | Associated with Nueva Ecija University of Science and Technology</div>
-        <p>A system to manage hotel bookings, room availability, and guest information efficiently, with online reservation features.</p>
+        <div class="project-details">Sep 2017 - Mar 2018 | Nueva Ecija University of Science and Technology</div>
+        <p>A complete reservation system for managing hotel bookings, guest data, and room availability.</p>
         <div class="skills">Skills: HTML, JavaScript, CSS, MySQL, PHP</div>
-      </div>
-      <div class="project">
-        <div class="project-title">Voucher System Website</div>
-        <p>A system for handling telecom operations and accounting for voucher records efficiently.</p>
-      </div>
-     
+      </article>
+
+      <article class="project">
+        <h3 class="project-title">Voucher System Website</h3>
+        <p>Developed to support telecom voucher tracking and accounting processes.</p>
+      </article>
     </section>
 
-    <!-- Experience Section -->
+    <!-- Experience -->
     <section class="section" id="experience">
       <h2>Experience</h2>
-       <p><strong>Calfurn</strong> - Sytem Developer/Programmer (2024 - present)</p>
+      <p><strong>Calfurn</strong> – System Developer/Programmer (2024 – Present)</p>
       <ul>
-        <li>Built responsive websites for small businesses.</li>
-        <li>Integrated APIs, improved page speed, and maintained SEO standards.</li>
-      </ul>
-      <p><strong>RA OMEGA Cable TV Corp</strong> - System Developer/Programmer (2022 - 2024)</p>
-      <ul>
-        <li>Built responsive websites for small businesses.</li>
-        <li>Integrated APIs, improved page speed, and maintained SEO standards.</li>
-      </ul>
-       <p><strong>Frontend Developer</strong> - Freelance (2020 - 2022)</p>
-      <ul>
-        <li>Built responsive websites for small businesses.</li>
-        <li>Integrated APIs, improved page speed, and maintained SEO standards.</li>
+        <li>Built responsive systems tailored for internal operations.</li>
+        <li>Integrated APIs and maintained system performance and SEO standards.</li>
       </ul>
 
+      <p><strong>RA OMEGA Cable TV Corp</strong> – System Developer/Programmer (2022 – 2024)</p>
+      <ul>
+        <li>Developed responsive business websites and systems.</li>
+        <li>Optimized performance and API integration.</li>
+      </ul>
+
+      <p><strong>Freelance</strong> – Frontend Developer (2020 – 2022)</p>
+      <ul>
+        <li>Created custom websites for small businesses.</li>
+        <li>Focused on SEO, UX, and mobile responsiveness.</li>
+      </ul>
     </section>
- 
-    <!-- Education Section -->
+
+    <!-- Education -->
     <section class="section" id="education">
       <h2>Education</h2>
       <p><strong>Bachelor of Science in Information Technology</strong><br/>Nueva Ecija University of Science and Technology</p>
     </section>
 
-    <!-- Footer Section -->
-    <footer class="footer" >
+    <!-- Footer -->
+    <footer class="footer">
       <p>Thank you for reviewing my portfolio. I’m open to freelance or part-time opportunities!</p>
     </footer>
   </div>
