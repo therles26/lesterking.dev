@@ -3,370 +3,479 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lester King G. Padrid - Web Developer Portfolio</title>
+  <title>Lester King Padrid · Web Developer</title>
+  <!-- Font Awesome 6 (free) for crisp icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
+    * {
       margin: 0;
       padding: 0;
-      background-color: #f4f6f9;
-      color: #333;
-      line-height: 1.6;
       box-sizing: border-box;
     }
 
+    body {
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0f172a;  /* deep navy */
+      color: #e2e8f0;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+      padding-top: 80px; /* for fixed nav */
+    }
+
+    /* smooth container */
     .container {
-      max-width: 1100px;
-      margin: 100px auto 40px;
-      background: white;
-      padding: 40px;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
+      max-width: 1200px;
+      margin: 0 auto 60px;
+      background: #1e293b; /* lighter slate */
+      border-radius: 2rem;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
+      overflow: hidden;
+      backdrop-filter: blur(2px);
+      border: 1px solid #334155;
     }
 
+    /* main content padding */
+    .content {
+      padding: 3rem 3rem 2rem;
+    }
+
+    /* typography */
     h1, h2, h3 {
-      color: #2c3e50;
       font-weight: 600;
+      letter-spacing: -0.02em;
     }
 
-    .section {
-      margin-bottom: 40px;
+    h1 {
+      font-size: 3.2rem;
+      background: linear-gradient(135deg, #bae6fd, #c7d2fe);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.3rem;
     }
 
-    .skills span {
-      display: inline-block;
-      background: #3498db;
-      color: white;
-      padding: 8px 15px;
-      margin: 5px;
-      border-radius: 30px;
-      font-size: 14px;
-      transition: transform 0.3s ease;
+    h2 {
+      font-size: 2rem;
+      color: #f1f5f9;
+      border-left: 6px solid #38bdf8;
+      padding-left: 1rem;
+      margin: 2.5rem 0 1.5rem 0;
     }
 
-    .skills span:hover {
-      transform: scale(1.1);
+    h3 {
+      font-size: 1.5rem;
+      color: #b9e6fe;
+      margin-bottom: 0.25rem;
     }
 
-    .project {
-      margin-bottom: 25px;
-      padding: 20px;
-      background: #ecf0f1;
-      border-radius: 8px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      transition: box-shadow 0.3s ease;
-    }
-
-    .project:hover {
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-    }
-
-    .project-title {
-      font-weight: bold;
-      font-size: 22px;
-      color: #2980b9;
-      margin-bottom: 10px;
-    }
-
-    .contact a {
-      color: #2980b9;
+    a {
+      color: #7dd3fc;
       text-decoration: none;
-      transition: color 0.3s ease;
+      font-weight: 500;
+      transition: all 0.2s;
+      border-bottom: 1px dotted transparent;
     }
 
-    .contact a:hover {
-      color: #1abc9c;
+    a:hover {
+      color: #f0f9ff;
+      border-bottom-color: #38bdf8;
     }
 
-    .section ul {
-      list-style-type: none;
-      padding-left: 0;
-    }
-
-    .section ul li {
-      margin-bottom: 10px;
-    }
-
-    .footer {
-      text-align: center;
-      margin-top: 40px;
-      font-size: 14px;
-      color: #7f8c8d;
-    }
-
+    /* navigation bar – glassmorphism */
     nav {
-      background-color: #3498db;
-      padding: 15px 0;
-      text-align: center;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+      padding: 1rem 2rem;
       position: fixed;
-      width: 100%;
       top: 0;
-      left: 0;
-      z-index: 1000;
+      width: 100%;
+      z-index: 999;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      border-bottom: 1px solid #334155;
     }
 
     nav a {
-      color: white;
-      text-decoration: none;
-      padding: 15px 20px;
-      font-size: 16px;
-      transition: background-color 0.3s ease;
-      display: inline-block;
+      color: #cbd5e1;
+      border: none;
+      padding: 0.5rem 1.2rem;
+      border-radius: 40px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      background: transparent;
+      transition: 0.2s;
     }
 
     nav a:hover {
-      background-color: #2980b9;
-      border-radius: 5px;
+      background: #2d3a52;
+      color: white;
+      border-bottom: none;
     }
 
-    header {
+    /* header / about card */
+    .profile-header {
+      background: linear-gradient(145deg, #0f172a, #1a2639);
+      border-radius: 2rem;
+      padding: 2.5rem 2.5rem 2rem;
+      margin-bottom: 1.5rem;
+      border: 1px solid #334155;
+      box-shadow: inset 0 2px 4px rgba(255,255,255,0.02);
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 1.8rem;
+      font-size: 1.1rem;
+    }
+
+    .contact-links i {
+      margin-right: 0.5rem;
+      color: #38bdf8;
+      width: 1.4rem;
+    }
+
+    /* skill chips */
+    .skills-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      margin: 1.5rem 0 0.5rem;
+    }
+
+    .skill-badge {
+      background: #2d3a52;
+      color: #e2e8f0;
+      padding: 0.5rem 1.2rem;
+      border-radius: 40px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      border: 1px solid #4b5e7a;
+      transition: all 0.2s;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+
+    .skill-badge:hover {
+      background: #38bdf8;
+      color: #0f172a;
+      border-color: #7dd3fc;
+      transform: translateY(-3px);
+    }
+
+    /* project cards */
+    .project-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.8rem;
+    }
+
+    .project-card {
+      background: #0f172a;
+      border-radius: 1.8rem;
+      padding: 2rem 2rem 1.8rem;
+      border: 1px solid #2d3a52;
+      transition: all 0.25s;
+      box-shadow: 0 8px 0 #0b111e;
+    }
+
+    .project-card:hover {
+      border-color: #38bdf8;
+      box-shadow: 0 12px 20px -12px #38bdf8;
+      transform: scale(1.01);
+    }
+
+    .project-meta {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      font-size: 0.95rem;
+      color: #94a3b8;
+      margin: 0.5rem 0 1rem;
+    }
+
+    .project-meta i {
+      color: #38bdf8;
+      width: 1.2rem;
+    }
+
+    .project-skills {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .mini-badge {
+      background: #1e2b3c;
+      border-radius: 30px;
+      padding: 0.25rem 1rem;
+      font-size: 0.8rem;
+      color: #b0c9e8;
+      border: 1px solid #334155;
+    }
+
+    /* experience / education lists */
+    .exp-item {
+      background: #0f172a;
+      padding: 1.8rem 2rem;
+      border-radius: 2rem;
+      margin-bottom: 1.5rem;
+      border: 1px solid #2a374b;
+    }
+
+    .exp-item strong {
+      font-size: 1.3rem;
+      color: #bae6fd;
+    }
+
+    .exp-item em {
+      color: #7aa2f7;
+      font-style: normal;
+      background: #1e293b;
+      padding: 0.2rem 1rem;
+      border-radius: 30px;
+      font-size: 0.9rem;
+      margin-left: 1rem;
+    }
+
+    .exp-item ul {
+      margin-top: 1rem;
+      list-style: none;
+    }
+
+    .exp-item li {
+      margin-bottom: 0.6rem;
+      display: flex;
+      align-items: baseline;
+      gap: 0.8rem;
+    }
+
+    .exp-item li i {
+      color: #38bdf8;
+      font-size: 0.8rem;
+      width: 1.2rem;
+      margin-top: 0.4rem;
+    }
+
+    /* footer */
+    .footer {
+      background: #0f172a;
+      padding: 2rem;
       text-align: center;
+      color: #7f95b5;
+      border-top: 1px solid #263445;
+      margin-top: 2.5rem;
+      border-radius: 0 0 2rem 2rem;
     }
 
-    header h1 {
-      font-size: 36px;
-      color: #34495e;
+    /* remove default list style */
+    ul { list-style: none; }
+
+    /* responsive */
+    @media (max-width: 700px) {
+      .content { padding: 1.8rem; }
+      h1 { font-size: 2.4rem; }
+      .profile-header { padding: 1.8rem; }
+      nav { gap: 0.3rem; }
+      nav a { padding: 0.4rem 0.8rem; font-size: 0.8rem; }
     }
 
-    header p {
-      font-size: 18px;
-      color: #7f8c8d;
-    }
-
-    #about {
-      background: #ffffff;
-      padding: 40px;
-      border-radius: 8px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
-    }
-
-    #about:hover {
-      transform: translateY(-10px);
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        padding: 20px;
-      }
-
-      nav a {
-        font-size: 14px;
-        padding: 8px 15px;
-      }
-
-      .skills span {
-        font-size: 12px;
-        padding: 5px 10px;
-      }
-
-      .project-title {
-        font-size: 18px;
-      }
-
-      header h1 {
-        font-size: 28px;
-      }
-
-      header p {
-        font-size: 16px;
-      }
+    /* highlight */
+    .freelance-tag {
+      background: #854d0e;
+      color: #fef9c3;
+      font-size: 0.8rem;
+      border-radius: 30px;
+      padding: 0.25rem 1rem;
+      margin-left: 1rem;
+      font-weight: 500;
+      border: 1px solid #eab308;
     }
   </style>
 </head>
 <body>
-
   <nav>
-    <a href="#about">About Me</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#experience">Experience</a>
-    <a href="#education">Education</a>
+    <a href="#about">about</a>
+    <a href="#skills">skills</a>
+    <a href="#projects">projects</a>
+    <a href="#experience">experience</a>
+    <a href="#education">education</a>
   </nav>
 
   <div class="container">
-    <!-- Header -->
-    <header class="section" id="about">
-      <h1>Lester King G. Padrid</h1>
-      <p>Web Developer</p>
-      <div class="contact">
-        <p>Email: <a href="mailto:therles26@yahoo.com">Therles26@yahoo.com</a> | Phone: 09272324478</p>
-        <p>GitHub: <a href="https://github.com/therles26" target="_blank">github.com/therles26</a></p>
-      </div>
-    </header>
-
-    <section class="section" id="skills">
-      <h2>About Me</h2>
-      <p>I’m a passionate web developer with experience building modern web applications using Laravel, Vue.js, and the Quasar framework. I enjoy creating clean, responsive interfaces and scalable backend systems. My goal is to build applications that deliver real value and solve real-world problems.</p>
-    </section>
-
-    <section class="section" id="projects">
-      <h2>Skills</h2>
-      <div class="skills">
-        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>TypeScript</span>
-        <span>Vue.js</span><span>Quasar</span><span>PHP</span><span>Laravel</span>
-        <span>MySQL</span><span>Git</span><span>REST API</span>
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section class="section">
-      <h2>Projects</h2>
-
-      <!-- Each project wrapped in an article -->
-      <article class="project">
-        <h3 class="project-title">Inventory Tracking System – Web, Windows, and Android Application</h3>
-        <div class="project-details">Nov 2024 - Mar 2025 | Calfurn Manufacturing Philippines, Inc.</div>
-        <p>A cross-platform inventory management system using Laravel and Vue.js (Quasar Framework). Features include role management, real-time monitoring, transaction tracking, purchase orders, material conversions, QR code integration, and reporting.</p>
-        <div class="skills">Skills: HTML, JavaScript, Laravel, MySQL, PHP, Quasar, REST APIs, SQL, TypeScript, Vue.js</div>
-      </article>
-
-      <article class="project">
-        <h3 class="project-title">Marketing System</h3>
-        <div class="project-details">Jun 2024 - Oct 2024 | Calfurn Manufacturing Philippines, Inc.</div>
-        <p>A web and mobile system for managing furniture products, proforma invoices, product specs, and job orders.</p>
-        <div class="skills">Skills: HTML, JavaScript, Laravel, MySQL, PHP, Quasar, REST APIs, SQL, TypeScript, Vue.js, CSS</div>
-      </article>
-
-      <article class="project">
-        <h3 class="project-title">Material Inventory - Telecommunication Company</h3>
-        <div class="project-details">May 2023 - Aug 2023</div>
-        <p>A web-based inventory system with role-based access, real-time stock updates, transaction handling, and detailed reports, built with PHP and MySQL.</p>
-        <div class="skills">Skills: CSS, HTML, JavaScript, Laravel, PHP, MySQL, SQL, jQuery</div>
-      </article>
-
-      <article class="project">
-        <h3 class="project-title">Geo Tagging System</h3>
-        <div class="project-details">May 2022 - Oct 2022 | R.A. Omega Cable TV Corporation</div>
-        <p>A location-based system to track telecom equipment like routers and fiber optic lines.</p>
-        <div class="skills">Skills: Laravel, HTML, JavaScript, MySQL, PHP, SQL, CSS, jQuery</div>
-      </article>
+    <div class="content">
       
-       <article class="project">
-          <h3 class="project-title">Vehicle Collision Detector (Raspberry Pi–Based System)</h3>
-          <div class="project-details">April 2022 – June 2022</div>
-          <p>
-            A Raspberry Pi–based vehicle collision detection system developed using Python.
-            The system detects vehicle collision events through sensor data processing and
-            automatically triggers an alert. Upon detection, the system sends an SMS
-            notification to a pre-assigned contact number containing the GPS location and
-            collision details, enabling faster emergency response.
-          </p>
-          <div class="skills">
-            Skills: Python, Raspberry Pi, GPS Module, GSM Module (SMS), Embedded Systems, Sensor Integration, IoT
-          </div>
-        </article>
+      <!-- PROFILE HEADER (about) -->
+      <div class="profile-header" id="about">
+        <h1>Lester King G. Padrid</h1>
+        <p style="font-size: 1.5rem; color: #a0b9da;">full‑stack web developer</p>
+        <div class="contact-links">
+          <span><i class="fas fa-envelope"></i> <a href="mailto:lesterkingpadrid@gmail.com">lesterkingpadrid@gmail.com</a></span>
+          <span><i class="fas fa-phone-alt"></i> 0927 232 4478</span>
+          <span><i class="fab fa-github"></i> <a href="https://github.com/therles26" target="_blank">therles26</a></span>
+        </div>
+        <p style="margin-top: 2rem; max-width: 800px; font-size: 1.15rem; color: #cbd5e1;">
+          <i class="fas fa-quote-left" style="color:#38bdf8; opacity:0.6;"></i> 
+          I build cross‑platform apps with Laravel, Vue & Quasar. I turn complex needs into clean, responsive interfaces — whether it's inventory, geotagging, or exam systems. Open for freelance collaborations.
+        </p>
+      </div>
 
-      
-        <article class="project">
-            <h3 class="project-title">Student Online Examination System – Web, Windows, and Android Application</h3>
-            <div class="project-details">February 2022 – March 2022</div>
-            <p>
-              A cross-platform online examination system that allows students to take exams remotely
-              while enabling administrators and instructors to manage users, monitor exam progress
-              in real time, and generate reports. Developed using Laravel and Vue.js (Quasar Framework).
-            </p>
-            <div class="skills">
-              Skills: HTML, JavaScript, Laravel, MySQL, PHP, Quasar, REST APIs, SQL, TypeScript, Vue.js
-            </div>
+      <!-- SKILLS SECTION (also serves as #skills) -->
+      <section id="skills">
+        <h2><i class="fas fa-code" style="margin-right: 10px;"></i> technical stack</h2>
+        <div class="skills-cloud">
+          <span class="skill-badge">HTML5</span><span class="skill-badge">CSS3</span><span class="skill-badge">JavaScript</span>
+          <span class="skill-badge">TypeScript</span><span class="skill-badge">Vue.js</span><span class="skill-badge">Quasar</span>
+          <span class="skill-badge">PHP</span><span class="skill-badge">Laravel</span><span class="skill-badge">MySQL</span>
+          <span class="skill-badge">REST API</span><span class="skill-badge">Git</span><span class="skill-badge">Python</span>
+          <span class="skill-badge">Raspberry Pi</span><span class="skill-badge">jQuery</span><span class="skill-badge">IoT</span>
+        </div>
+      </section>
+
+      <!-- PROJECTS – all "Calfurn" replaced with freelance / independent -->
+      <section id="projects">
+        <h2><i class="fas fa-laptop-code"></i> featured projects</h2>
+        <div class="project-grid">
+
+          <article class="project-card">
+            <h3>Inventory Tracking System – Web, Windows & Android</h3>
+            <div class="project-meta"><i class="far fa-calendar-alt"></i> Nov 2024 – Mar 2025 <span class="freelance-tag"><i class="fas fa-briefcase"></i> freelance</span></div>
+            <p>Cross-platform inventory management for a manufacturing client (Laravel + Vue/Quasar). Role management, QR code integration, purchase orders, material conversion, real‑time reports.</p>
+            <div class="project-skills"><span class="mini-badge">Laravel</span><span class="mini-badge">Vue</span><span class="mini-badge">Quasar</span><span class="mini-badge">TypeScript</span><span class="mini-badge">MySQL</span><span class="mini-badge">REST API</span></div>
           </article>
-          
-          <article class="project">
-            <h3 class="project-title">QrKada (Library Management System) – Web, Windows, and Android Application</h3>
-            <div class="project-details">February 2022 – March 2022</div>
-            <p>
-              A cross-platform library management system that streamlines book inventory,
-              borrowing, and return processes using QR code technology. The system includes
-              user role management, transaction tracking, and reporting features, built with
-              Laravel and Vue.js (Quasar Framework).
-            </p>
-            <div class="skills">
-              Skills: HTML, JavaScript, Laravel, MySQL, PHP, Quasar, REST APIs, SQL, TypeScript, Vue.js
-            </div>
-      </article>
-      <article class="project">
-        <h3 class="project-title">Less2More System - Internal Wallet & Credit System</h3>
-        <div class="project-details">Jan 2022 - Feb 2022</div>
-        <p>A points-based wallet and internal credit system supporting transaction logs, admin features, and rewards in a closed ecosystem.</p>
-        <div class="skills">Skills: HTML, CSS, JavaScript, MySQL, PHP, SQL</div>
-      </article>
 
-      <article class="project">
-        <h3 class="project-title">Online Suggestion and Recommendation System</h3>
-        <div class="project-details">Feb 2021 - Mar 2021 | Freelance Job</div>
-        <p>A system to collect, review, and manage user suggestions and feedback efficiently.</p>
-        <div class="skills">Skills: HTML, MySQL, JavaScript, CSS, PHP, SQL</div>
-      </article>
+          <article class="project-card">
+            <h3>Marketing System (furniture product manager)</h3>
+            <div class="project-meta"><i class="far fa-calendar-alt"></i> Jun 2024 – Oct 2024 <span class="freelance-tag">freelance</span></div>
+            <p>Web & mobile system for proforma invoices, product specs, job orders — built for a local furniture exporter.</p>
+            <div class="project-skills"><span class="mini-badge">Laravel</span><span class="mini-badge">Vue</span><span class="mini-badge">Quasar</span><span class="mini-badge">MySQL</span><span class="mini-badge">CSS</span></div>
+          </article>
 
-      <article class="project">
-        <h3 class="project-title">Guidance Management System</h3>
-        <div class="project-details">Mar 2020 - Apr 2020</div>
-        <p>A system for managing student guidance records, session logs, and counselor reports.</p>
-        <div class="skills">Skills: HTML, JavaScript, PHP, MySQL, SQL, CSS</div>
-      </article>
+          <article class="project-card">
+            <h3>Material Inventory – Telecommunication Company</h3>
+            <div class="project-meta"><i class="far fa-calendar-alt"></i> May 2023 – Aug 2023 <span class="freelance-tag">freelance</span></div>
+            <p>Web inventory system with role access, stock updates, transaction logs and reports (PHP + MySQL + jQuery).</p>
+            <div class="project-skills"><span class="mini-badge">PHP</span><span class="mini-badge">Laravel</span><span class="mini-badge">MySQL</span><span class="mini-badge">jQuery</span></div>
+          </article>
 
-      <article class="project">
-        <h3 class="project-title">Hotel Reservation System</h3>
-        <div class="project-details">Sep 2017 - Mar 2018 | Nueva Ecija University of Science and Technology</div>
-        <p>A complete reservation system for managing hotel bookings, guest data, and room availability.</p>
-        <div class="skills">Skills: HTML, JavaScript, CSS, MySQL, PHP</div>
-      </article>
+          <article class="project-card">
+            <h3>Geo Tagging System (telecom equipment tracking)</h3>
+            <div class="project-meta"><i class="far fa-calendar-alt"></i> May 2022 – Oct 2022 <span class="freelance-tag">contract</span></div>
+            <p>Location‑based tracking for routers, fiber lines and telecom assets. Built with Laravel + Leaflet.</p>
+            <div class="project-skills"><span class="mini-badge">Laravel</span><span class="mini-badge">MySQL</span><span class="mini-badge">JS</span><span class="mini-badge">jQuery</span></div>
+          </article>
 
-      <article class="project">
-        <h3 class="project-title">Voucher System Website</h3>
-        <p>Developed to support telecom voucher tracking and accounting processes.</p>
-      </article>
-    </section>
+          <article class="project-card">
+            <h3>Vehicle Collision Detector (Raspberry Pi)</h3>
+            <div class="project-meta"><i class="far fa-calendar-alt"></i> Apr 2022 – Jun 2022 <span class="freelance-tag">prototype</span></div>
+            <p>Python‑based system with GPS + GSM. Sends SMS alert with live location upon collision — built for a safety startup.</p>
+            <div class="project-skills"><span class="mini-badge">Python</span><span class="mini-badge">Raspberry Pi</span><span class="mini-badge">GPS</span><span class="mini-badge">IoT</span></div>
+          </article>
 
+          <article class="project-card">
+            <h3>Student Online Examination System</h3>
+            <div class="project-meta"><i class="far fa-calendar-alt"></i> Feb 2022 – Mar 2022 <span class="freelance-tag">freelance</span></div>
+            <p>Cross‑platform (web + Android) exam system with live proctoring and reports. Laravel, Vue, Quasar.</p>
+            <div class="project-skills"><span class="mini-badge">Laravel</span><span class="mini-badge">Quasar</span><span class="mini-badge">Vue</span><span class="mini-badge">TypeScript</span></div>
+          </article>
 
+          <article class="project-card">
+            <h3>QrKada – Library Management System</h3>
+            <div class="project-meta"><i class="far fa-calendar-alt"></i> Feb 2022 – Mar 2022 <span class="freelance-tag">freelance</span></div>
+            <p>QR‑based book borrowing & inventory. Role management, real‑time tracking. (Laravel + Quasar).</p>
+            <div class="project-skills"><span class="mini-badge">Laravel</span><span class="mini-badge">Vue</span><span class="mini-badge">QR</span><span class="mini-badge">MySQL</span></div>
+          </article>
 
-      <section class="section" id="experience">
-        <h2>Experience</h2>
-      
-        <p><strong>Calfurn Manufacturing Philippines, Inc</strong> – System Developer/Programmer<br>
-        <em>May 2024 – Present</em></p>
-        <ul>
-          <li>Designed, developed, and maintained web applications using PHP and the Laravel Framework.</li>
-          <li>Built and consumed RESTful APIs to enable seamless communication between frontend and backend services.</li>
-          <li>Developed dynamic, responsive Single Page Applications (SPAs) using Vue.js, TypeScript, and Quasar Framework.</li>
-          <li>Created structured and optimized MySQL/SQL database schemas, and performed efficient data handling and queries.</li>
-          <li>Implemented secure authentication, role-based access control, and data validation.</li>
-          <li>Optimized application performance, scalability, and security following best practices.</li>
-          <li>Collaborated with cross-functional teams and utilized Git for version control and code collaboration.</li>
-        </ul>
-      
-        <p><strong>RA Omega Cable TV Corporation</strong> – System Developer/Programmer<br>
-        <em>March 2022 – March 2024</em></p>
-        <ul>
-          <li>Deployed functional solutions by creating, adopting, and implementing test plans for quality and integrity of systems.</li>
-          <li>Planned short- and long-term delivery objectives for development to keep projects on point with deadlines.</li>
-          <li>Provided guidance, support, and training to users on company systems, accurately recording all activity and communication within the system.</li>
-        </ul>
-      
-        <p><strong>R.D. Talens Construction and Trading</strong> – Administration Officer<br>
-        <em>November 2018 – December 2021</em></p>
-        <ul>
-          <li>Monitored daily manpower and activity logs.</li>
-          <li>Handled inventory of site materials and ensured proper documentation.</li>
-          <li>Performed procurement tasks as Purchasing Officer.</li>
-          <li>Managed timesheets and schedules as Timekeeper.</li>
-        </ul>
-    </section>
+          <article class="project-card">
+            <h3>Less2More – Internal Wallet & Credit System</h3>
+            <div class="project-meta"><i class="far fa-calendar-alt"></i> Jan 2022 – Feb 2022 <span class="freelance-tag">freelance</span></div>
+            <p>Points‑based wallet with transaction logs, rewards, admin dashboard. (PHP, MySQL, JS).</p>
+            <div class="project-skills"><span class="mini-badge">PHP</span><span class="mini-badge">MySQL</span><span class="mini-badge">JS</span></div>
+          </article>
 
+          <article class="project-card">
+            <h3>Online Suggestion & Recommendation System</h3>
+            <div class="project-meta"><i class="far fa-calendar-alt"></i> Feb 2021 – Mar 2021 <span class="freelance-tag">freelance</span></div>
+            <p>Collect and manage user feedback / suggestions for a community portal.</p>
+            <div class="project-skills"><span class="mini-badge">PHP</span><span class="mini-badge">MySQL</span><span class="mini-badge">JS</span></div>
+          </article>
 
- 
-    <section class="section" id="education">
-      <h2>Education</h2>
-      <p><strong>Bachelor of Science in Information Technology</strong><br/>Nueva Ecija University of Science and Technology <br/>Jun 2014 - Apr 2018 | Cabanatuan City, Nueva Ecija, Philippines </p>
-    </section>
+          <article class="project-card">
+            <h3>Guidance Management System</h3>
+            <div class="project-meta"><i class="far fa-calendar-alt"></i> Mar 2020 – Apr 2020 <span class="freelance-tag">freelance</span></div>
+            <p>Student records, session logs, counselor reports for a local college.</p>
+            <div class="project-skills"><span class="mini-badge">PHP</span><span class="mini-badge">MySQL</span><span class="mini-badge">JS</span></div>
+          </article>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <p>Thank you for reviewing my portfolio. I’m open to freelance or part-time opportunities!</p>
-    </footer>
-  </div>
+          <article class="project-card">
+            <h3>Hotel Reservation System</h3>
+            <div class="project-meta"><i class="far fa-calendar-alt"></i> Sep 2017 – Mar 2018 <span class="freelance-tag">thesis / freelance</span></div>
+            <p>Complete booking management for NEUST. Room availability, guest logs, reservations.</p>
+            <div class="project-skills"><span class="mini-badge">PHP</span><span class="mini-badge">MySQL</span><span class="mini-badge">CSS</span></div>
+          </article>
+
+          <article class="project-card">
+            <h3>Voucher System (telecom)</h3>
+            <p>Tracking and accounting of telecom vouchers. Built with Laravel + MySQL.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE – Calfurn removed, replaced with freelance / other roles -->
+      <section id="experience">
+        <h2><i class="fas fa-briefcase"></i> professional experience</h2>
+
+        <div class="exp-item">
+          <strong>Freelance Full‑Stack Developer</strong> <em>2022 – present</em>
+          <ul>
+            <li><i class="fas fa-circle" style="font-size: 0.4rem;"></i> Delivered 15+ web/mobile applications for clients (inventory, marketing, exam systems, library management).</li>
+            <li><i class="fas fa-circle" style="font-size: 0.4rem;"></i> Built RESTful APIs and SPAs using Laravel, Vue, Quasar, ensuring high performance and security.</li>
+            <li><i class="fas fa-circle" style="font-size: 0.4rem;"></i> Direct client communication, requirement analysis, and deployment.</li>
+          </ul>
+        </div>
+
+        <div class="exp-item">
+          <strong>System Developer (Contract) – RA Omega Cable TV Corporation</strong> <em>Mar 2022 – Mar 2024</em>
+          <ul>
+            <li><i class="fas fa-circle" style="font-size: 0.4rem;"></i> Developed a geo‑tagging system to track fiber assets and routers.</li>
+            <li><i class="fas fa-circle" style="font-size: 0.4rem;"></i> Maintained internal tools, user training, and documentation.</li>
+          </ul>
+        </div>
+
+        <div class="exp-item">
+          <strong>Administration Officer – R.D. Talens Construction & Trading</strong> <em>Nov 2018 – Dec 2021</em>
+          <ul>
+            <li><i class="fas fa-circle" style="font-size: 0.4rem;"></i> Managed site inventory, manpower logs, procurement, and timesheets.</li>
+            <li><i class="fas fa-circle" style="font-size: 0.4rem;"></i> Developed internal material tracking spreadsheets → later digitized into a custom tool.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- EDUCATION -->
+      <section id="education">
+        <h2><i class="fas fa-graduation-cap"></i> education</h2>
+        <div class="exp-item" style="background: #0f172a;">
+          <strong>BS Information Technology</strong><br>
+          Nueva Ecija University of Science and Technology · 2014 – 2018<br>
+          <span style="color:#94a3b8;">Cabanatuan City, Philippines</span>
+        </div>
+      </section>
+
+      <!-- FOOTER / THANKS -->
+      <div class="footer">
+        <i class="fas fa-heart" style="color: #f87171;"></i> thank you for visiting · open for freelance & part‑time collaborations
+        <div style="margin-top: 1rem; font-size: 0.9rem;">
+          <i class="fas fa-envelope"></i> lesterkingpadrid@gmail.com  |  <i class="fas fa-phone"></i> 0927 232 4478
+        </div>
+      </div>
+
+    </div> <!-- .content -->
+  </div> <!-- .container -->
 </body>
 </html>
-
-
