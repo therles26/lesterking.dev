@@ -18,7 +18,6 @@
       padding-top: 70px;
     }
 
-    /* NAVIGATION WITH SCROLL EFFECT */
     nav {
       background: rgba(255, 255, 255, 0.96);
       backdrop-filter: blur(20px);
@@ -49,7 +48,6 @@
       border-bottom: 2px solid transparent;
       transition: 0.3s ease;
       font-size: 0.9rem;
-      position: relative;
     }
 
     nav a:hover { border-bottom-color: #1f6eb0; color: #1f6eb0; }
@@ -65,7 +63,6 @@
 
     .content { padding: 2rem 2rem; }
 
-    /* HERO SECTION - MAY ANIMATION */
     .hero-card {
       background: linear-gradient(135deg, #ffffff 0%, #f8fcff 100%);
       border-radius: 1.5rem;
@@ -79,13 +76,9 @@
     }
 
     @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      to { opacity: 1; transform: translateY(0); }
     }
 
-    /* PICTURE WITH PULSE EFFECT ON HOVER */
     .profile-photo {
       width: 140px;
       height: 140px;
@@ -94,29 +87,13 @@
       object-position: 50% 15%;
       border: 4px solid white;
       box-shadow: 0 10px 20px -8px rgba(31,110,176,0.3);
-      background: #dce5f0;
       margin-bottom: 1.2rem;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+    .profile-photo:hover { transform: scale(1.05); }
 
-    .profile-photo:hover {
-      transform: scale(1.05);
-      box-shadow: 0 15px 30px -10px rgba(31,110,176,0.4);
-    }
-
-    .name-row h1 {
-      font-size: 2rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      color: #0b2f4a;
-    }
-
-    .tagline {
-      font-size: 1rem;
-      font-weight: 500;
-      color: #1f5a82;
-      margin-top: 0.3rem;
-    }
+    .name-row h1 { font-size: 2rem; font-weight: 700; color: #0b2f4a; }
+    .tagline { font-size: 1rem; font-weight: 500; color: #1f5a82; margin-top: 0.3rem; }
 
     .badge-strip {
       display: flex;
@@ -139,13 +116,7 @@
       border: 1px solid #c2dcf5;
       transition: all 0.3s ease;
     }
-
-    .badge:hover {
-      transform: translateY(-3px);
-      background: #1f6eb0;
-      color: white;
-      border-color: #1f6eb0;
-    }
+    .badge:hover { transform: translateY(-3px); background: #1f6eb0; color: white; }
     .badge:hover i { color: white; }
 
     .highlight-message {
@@ -159,11 +130,7 @@
       text-align: left;
       transition: all 0.3s ease;
     }
-
-    .highlight-message:hover {
-      background: #e5f0fa;
-      transform: translateX(5px);
-    }
+    .highlight-message:hover { background: #e5f0fa; transform: translateX(5px); }
 
     .info-grid {
       display: flex;
@@ -184,13 +151,8 @@
       font-size: 0.75rem;
       transition: all 0.3s ease;
     }
-
-    .info-item:hover {
-      transform: translateY(-3px);
-      border-color: #1f6eb0;
-      background: #f0f7ff;
-    }
-    .info-item i { color: #1f6eb0; width: 18px; font-size: 0.8rem; }
+    .info-item:hover { transform: translateY(-3px); border-color: #1f6eb0; background: #f0f7ff; }
+    .info-item i { color: #1f6eb0; width: 18px; }
 
     .contact-links {
       display: flex;
@@ -211,16 +173,10 @@
       transition: all 0.3s ease;
       font-size: 0.75rem;
     }
-
     .contact-pill a { text-decoration: none; font-weight: 500; color: #1d4e72; }
-    .contact-pill:hover { 
-      background: #1f6eb0; 
-      transform: translateY(-3px);
-      box-shadow: 0 5px 15px rgba(31,110,176,0.3);
-    }
+    .contact-pill:hover { background: #1f6eb0; transform: translateY(-3px); box-shadow: 0 5px 15px rgba(31,110,176,0.3); }
     .contact-pill:hover a, .contact-pill:hover i { color: white; }
 
-    /* SECTION HEADERS WITH ANIMATION */
     h2 {
       font-size: 1.3rem;
       font-weight: 700;
@@ -232,32 +188,21 @@
       padding-bottom: 0.4rem;
       color: #0b2f48;
     }
-    h2 i { color: #1f6eb0; font-size: 1.2rem; }
+    h2 i { color: #1f6eb0; }
 
-    /* SCROLL REVEAL CLASSES */
     .reveal {
       opacity: 0;
       transform: translateY(30px);
       transition: all 0.6s ease;
     }
-
-    .reveal.active {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* DELAYS */
-    .reveal:nth-child(1) { transition-delay: 0s; }
-    .reveal:nth-child(2) { transition-delay: 0.1s; }
-    .reveal:nth-child(3) { transition-delay: 0.2s; }
-    .reveal:nth-child(4) { transition-delay: 0.3s; }
+    .reveal.active { opacity: 1; transform: translateY(0); }
 
     .skills-container {
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
-      margin: 0.5rem 0;
       justify-content: center;
+      margin: 0.5rem 0;
     }
     .skill-pill {
       background: #fff;
@@ -269,12 +214,7 @@
       font-size: 0.75rem;
       transition: all 0.3s ease;
     }
-    .skill-pill:hover { 
-      background: #1f6eb0; 
-      color: white; 
-      transform: translateY(-3px) scale(1.02);
-      border-color: #1f6eb0;
-    }
+    .skill-pill:hover { background: #1f6eb0; color: white; transform: translateY(-3px); }
 
     .projects-container {
       display: flex;
@@ -295,12 +235,7 @@
       gap: 0.7rem;
     }
 
-    .project-row:hover { 
-      border-color: #1f6eb0; 
-      background: white; 
-      transform: translateX(8px) scale(1.01);
-      box-shadow: 0 5px 15px rgba(31,110,176,0.1);
-    }
+    .project-row:hover { border-color: #1f6eb0; background: white; transform: translateX(8px); }
 
     .project-icon {
       width: 36px;
@@ -313,12 +248,37 @@
       flex-shrink: 0;
       transition: all 0.3s ease;
     }
-    .project-row:hover .project-icon {
-      background: #1f6eb0;
-      transform: rotate(5deg) scale(1.05);
-    }
+    .project-row:hover .project-icon { background: #1f6eb0; transform: rotate(5deg); }
     .project-row:hover .project-icon i { color: white; }
     .project-icon i { font-size: 1rem; color: #1f6eb0; transition: 0.3s; }
+
+    /* SPECIAL: PROJECT WITH IMAGE (ONLINE EXAM) */
+    .project-with-img {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      flex-wrap: wrap;
+    }
+    .project-img-thumb {
+      width: 45px;
+      height: 45px;
+      border-radius: 10px;
+      overflow: hidden;
+      flex-shrink: 0;
+      background: linear-gradient(135deg, #1f6eb0, #0e4a6e);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .project-img-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .project-img-thumb i {
+      font-size: 1.2rem;
+      color: rgba(255,255,255,0.7);
+    }
 
     .project-details { flex: 1; }
     .project-details h3 { font-size: 0.9rem; font-weight: 700; color: #0b2f48; }
@@ -331,24 +291,17 @@
       border-radius: 20px;
       color: #1f5e8a;
       font-weight: 600;
-      transition: 0.3s;
     }
     .project-row:hover .project-cat { background: #1f6eb0; color: white; }
 
-    .project-tech {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.25rem;
-    }
+    .project-tech { display: flex; flex-wrap: wrap; gap: 0.25rem; }
     .project-tech span {
       background: #ecf4fc;
       padding: 0.1rem 0.5rem;
       border-radius: 20px;
       font-size: 0.55rem;
       color: #1f5e8a;
-      transition: 0.3s;
     }
-    .project-row:hover .project-tech span { background: #e0ecf5; }
 
     .exp-block {
       background: #f6fbfe;
@@ -358,11 +311,7 @@
       border-left: 4px solid #1f6eb0;
       transition: all 0.3s ease;
     }
-    .exp-block:hover {
-      transform: translateX(8px);
-      background: white;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    }
+    .exp-block:hover { transform: translateX(8px); background: white; }
     .exp-company { font-size: 1rem; font-weight: 700; color: #0d3552; }
     .exp-role { font-weight: 600; color: #2b6c9e; font-size: 0.75rem; margin: 0.2rem 0 0.3rem; }
     .exp-list { list-style: none; margin-top: 0.3rem; }
@@ -377,10 +326,7 @@
       font-size: 0.85rem;
       transition: all 0.3s ease;
     }
-    .education-card:hover {
-      transform: scale(1.01);
-      background: #eef4fc;
-    }
+    .education-card:hover { transform: scale(1.01); background: #eef4fc; }
 
     .footer-cta {
       background: #eaf2fa;
@@ -390,16 +336,12 @@
       text-align: center;
       transition: all 0.3s ease;
     }
-    .footer-cta:hover {
-      background: #e2ecf5;
-      transform: scale(1.01);
-    }
+    .footer-cta:hover { background: #e2ecf5; transform: scale(1.01); }
 
     @media (max-width: 680px) {
       .content { padding: 1rem; }
       .hero-card { padding: 1.2rem; }
       .project-row { flex-direction: column; align-items: flex-start; }
-      .project-row:hover { transform: translateX(5px); }
     }
   </style>
 </head>
@@ -460,17 +402,39 @@
       
       <div class="projects-container">
         <div class="project-row"><div class="project-icon"><i class="fas fa-landmark"></i></div><div class="project-details"><h3>RPT Tax Management System</h3><p>Real Property Tax assessment, Tax Declaration, Billing & Collection</p></div><div class="project-cat">Gov</div><div class="project-tech"><span>Laravel</span><span>Vue</span><span>MySQL</span></div></div>
+        
         <div class="project-row"><div class="project-icon"><i class="fas fa-boxes"></i></div><div class="project-details"><h3>InventoryTrack · Cross-Platform Suite</h3><p>Multi-warehouse inventory, QR scanning, real-time stock, purchase orders</p></div><div class="project-cat">Mfg</div><div class="project-tech"><span>Laravel</span><span>Vue 3</span><span>Quasar</span></div></div>
+        
         <div class="project-row"><div class="project-icon"><i class="fas fa-file-invoice"></i></div><div class="project-details"><h3>Proforma Marketing System</h3><p>Product catalog, proforma invoices, job orders, PDF spec sheets</p></div><div class="project-cat">Export</div><div class="project-tech"><span>Laravel</span><span>Vue</span><span>PDF</span></div></div>
+        
         <div class="project-row"><div class="project-icon"><i class="fas fa-tower-broadcast"></i></div><div class="project-details"><h3>Telecom Asset & Inventory</h3><p>Inventory control, role-based dashboards, stock movement logs</p></div><div class="project-cat">Telecom</div><div class="project-tech"><span>Laravel</span><span>jQuery</span><span>MySQL</span></div></div>
+        
         <div class="project-row"><div class="project-icon"><i class="fas fa-map-marker-alt"></i></div><div class="project-details"><h3>GeoTagging · Fiber Asset Tracker</h3><p>Real-time geolocation for fiber endpoints, Leaflet maps</p></div><div class="project-cat">Telecom</div><div class="project-tech"><span>Laravel</span><span>Leaflet</span><span>MySQL</span></div></div>
+        
         <div class="project-row"><div class="project-icon"><i class="fas fa-car-crash"></i></div><div class="project-details"><h3>Collision Detect · IoT System</h3><p>Raspberry Pi + GPS/GSM: collision detection + SMS alert</p></div><div class="project-cat">IoT</div><div class="project-tech"><span>Python</span><span>RPi</span><span>GSM</span></div></div>
-        <div class="project-row"><div class="project-icon"><i class="fas fa-laptop-exam"></i></div><div class="project-details"><h3>Online Examination Platform</h3><p>Remote exam with proctoring, real-time results, admin dashboards</p></div><div class="project-cat">Edu</div><div class="project-tech"><span>Laravel</span><span>Vue</span><span>Quasar</span></div></div>
+        
+        <!-- ITO YUNG ONLINE EXAM NA MAY IMAGE NA -->
+        <div class="project-row">
+          <div class="project-img-thumb">
+            <!-- PALITAN MO ITO NG ACTUAL SCREENSHOT MO -->
+            <img src="online-exam-preview.jpg" alt="Online Exam Preview" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-laptop-exam\'></i>';">
+            <i class="fas fa-laptop-exam" style="display: none;"></i>
+          </div>
+          <div class="project-details"><h3>Online Examination Platform</h3><p>Remote exam with proctoring, real-time results, admin dashboards</p></div>
+          <div class="project-cat">Edu</div>
+          <div class="project-tech"><span>Laravel</span><span>Vue</span><span>Quasar</span></div>
+        </div>
+        
         <div class="project-row"><div class="project-icon"><i class="fas fa-qrcode"></i></div><div class="project-details"><h3>QrKada · Library Automation</h3><p>QR-based borrowing, member tracking, fines management</p></div><div class="project-cat">Library</div><div class="project-tech"><span>Laravel</span><span>Vue</span><span>QR API</span></div></div>
+        
         <div class="project-row"><div class="project-icon"><i class="fas fa-wallet"></i></div><div class="project-details"><h3>Less2More · Credit System</h3><p>Points-based wallet, rewards redemption, transaction ledger</p></div><div class="project-cat">Fintech</div><div class="project-tech"><span>PHP</span><span>MySQL</span><span>JS</span></div></div>
+        
         <div class="project-row"><div class="project-icon"><i class="fas fa-comment-dots"></i></div><div class="project-details"><h3>Citizen Feedback Portal</h3><p>Anonymous suggestions, admin moderation, public dashboard</p></div><div class="project-cat">LGU</div><div class="project-tech"><span>PHP</span><span>MySQL</span><span>Bootstrap</span></div></div>
+        
         <div class="project-row"><div class="project-icon"><i class="fas fa-user-graduate"></i></div><div class="project-details"><h3>Guidance Records System</h3><p>Student counseling logs, behavior tracking, counselor dashboard</p></div><div class="project-cat">Edu</div><div class="project-tech"><span>PHP</span><span>MySQL</span><span>jQuery</span></div></div>
+        
         <div class="project-row"><div class="project-icon"><i class="fas fa-hotel"></i></div><div class="project-details"><h3>Hotel Reservation System</h3><p>Room booking, availability calendar, guest history</p></div><div class="project-cat">Hospitality</div><div class="project-tech"><span>PHP</span><span>MySQL</span><span>CSS</span></div></div>
+        
         <div class="project-row"><div class="project-icon"><i class="fas fa-ticket-alt"></i></div><div class="project-details"><h3>Telecom Voucher Accounting</h3><p>Voucher generation, redemption tracking, reconciliation</p></div><div class="project-cat">Telecom</div><div class="project-tech"><span>Laravel</span><span>MySQL</span></div></div>
       </div>
     </section>
@@ -544,7 +508,6 @@
 </div>
 
 <script>
-  // Scroll Animation - nagfa-fade in habang nagsscroll down
   const reveals = document.querySelectorAll('.reveal');
   
   function revealOnScroll() {
@@ -552,14 +515,12 @@
       const windowHeight = window.innerHeight;
       const revealTop = reveals[i].getBoundingClientRect().top;
       const revealPoint = 100;
-      
       if (revealTop < windowHeight - revealPoint) {
         reveals[i].classList.add('active');
       }
     }
   }
   
-  // Navbar scroll effect - lumiliit ang navbar pag nagscroll
   window.addEventListener('scroll', function() {
     const navbar = document.getElementById('navbar');
     if (window.scrollY > 50) {
@@ -570,7 +531,6 @@
     revealOnScroll();
   });
   
-  // Initial trigger
   revealOnScroll();
 </script>
 </body>
