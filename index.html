@@ -18,6 +18,7 @@
       padding-top: 70px;
     }
 
+    /* NAVIGATION WITH SCROLL EFFECT */
     nav {
       background: rgba(255, 255, 255, 0.96);
       backdrop-filter: blur(20px);
@@ -31,6 +32,13 @@
       gap: 2rem;
       border-bottom: 1px solid rgba(31, 110, 176, 0.2);
       flex-wrap: wrap;
+      transition: all 0.3s ease;
+    }
+
+    nav.scrolled {
+      padding: 0.4rem 2rem;
+      background: rgba(255, 255, 255, 0.98);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
     }
 
     nav a {
@@ -39,11 +47,12 @@
       text-decoration: none;
       padding: 0.4rem 0;
       border-bottom: 2px solid transparent;
-      transition: 0.2s;
+      transition: 0.3s ease;
       font-size: 0.9rem;
+      position: relative;
     }
 
-    nav a:hover { border-bottom-color: #1f6eb0; }
+    nav a:hover { border-bottom-color: #1f6eb0; color: #1f6eb0; }
 
     .container {
       max-width: 900px;
@@ -56,7 +65,7 @@
 
     .content { padding: 2rem 2rem; }
 
-    /* HERO SECTION - PICTURE SA ITAAS (CENTERED) */
+    /* HERO SECTION - MAY ANIMATION */
     .hero-card {
       background: linear-gradient(135deg, #ffffff 0%, #f8fcff 100%);
       border-radius: 1.5rem;
@@ -64,8 +73,19 @@
       margin-bottom: 2rem;
       border: 1px solid #e2effb;
       text-align: center;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 0.8s ease forwards;
     }
 
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* PICTURE WITH PULSE EFFECT ON HOVER */
     .profile-photo {
       width: 140px;
       height: 140px;
@@ -76,6 +96,12 @@
       box-shadow: 0 10px 20px -8px rgba(31,110,176,0.3);
       background: #dce5f0;
       margin-bottom: 1.2rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .profile-photo:hover {
+      transform: scale(1.05);
+      box-shadow: 0 15px 30px -10px rgba(31,110,176,0.4);
     }
 
     .name-row h1 {
@@ -111,7 +137,16 @@
       align-items: center;
       gap: 0.4rem;
       border: 1px solid #c2dcf5;
+      transition: all 0.3s ease;
     }
+
+    .badge:hover {
+      transform: translateY(-3px);
+      background: #1f6eb0;
+      color: white;
+      border-color: #1f6eb0;
+    }
+    .badge:hover i { color: white; }
 
     .highlight-message {
       background: #eef4fc;
@@ -122,6 +157,12 @@
       border-left: 4px solid #1f6eb0;
       color: #0c344e;
       text-align: left;
+      transition: all 0.3s ease;
+    }
+
+    .highlight-message:hover {
+      background: #e5f0fa;
+      transform: translateX(5px);
     }
 
     .info-grid {
@@ -141,6 +182,13 @@
       padding: 0.3rem 1rem;
       border: 1px solid #cde3f5;
       font-size: 0.75rem;
+      transition: all 0.3s ease;
+    }
+
+    .info-item:hover {
+      transform: translateY(-3px);
+      border-color: #1f6eb0;
+      background: #f0f7ff;
     }
     .info-item i { color: #1f6eb0; width: 18px; font-size: 0.8rem; }
 
@@ -160,14 +208,19 @@
       display: flex;
       align-items: center;
       gap: 0.4rem;
-      transition: 0.2s;
+      transition: all 0.3s ease;
       font-size: 0.75rem;
     }
 
     .contact-pill a { text-decoration: none; font-weight: 500; color: #1d4e72; }
-    .contact-pill:hover { background: #1f6eb0; }
+    .contact-pill:hover { 
+      background: #1f6eb0; 
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(31,110,176,0.3);
+    }
     .contact-pill:hover a, .contact-pill:hover i { color: white; }
 
+    /* SECTION HEADERS WITH ANIMATION */
     h2 {
       font-size: 1.3rem;
       font-weight: 700;
@@ -180,6 +233,24 @@
       color: #0b2f48;
     }
     h2 i { color: #1f6eb0; font-size: 1.2rem; }
+
+    /* SCROLL REVEAL CLASSES */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* DELAYS */
+    .reveal:nth-child(1) { transition-delay: 0s; }
+    .reveal:nth-child(2) { transition-delay: 0.1s; }
+    .reveal:nth-child(3) { transition-delay: 0.2s; }
+    .reveal:nth-child(4) { transition-delay: 0.3s; }
 
     .skills-container {
       display: flex;
@@ -196,9 +267,14 @@
       font-weight: 500;
       color: #114b72;
       font-size: 0.75rem;
-      transition: 0.2s;
+      transition: all 0.3s ease;
     }
-    .skill-pill:hover { background: #1f6eb0; color: white; }
+    .skill-pill:hover { 
+      background: #1f6eb0; 
+      color: white; 
+      transform: translateY(-3px) scale(1.02);
+      border-color: #1f6eb0;
+    }
 
     .projects-container {
       display: flex;
@@ -212,14 +288,19 @@
       border-radius: 0.8rem;
       border: 1px solid #deedfa;
       padding: 0.7rem 1rem;
-      transition: all 0.2s;
+      transition: all 0.3s ease;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       gap: 0.7rem;
     }
 
-    .project-row:hover { border-color: #1f6eb0; background: white; transform: translateX(3px); }
+    .project-row:hover { 
+      border-color: #1f6eb0; 
+      background: white; 
+      transform: translateX(8px) scale(1.01);
+      box-shadow: 0 5px 15px rgba(31,110,176,0.1);
+    }
 
     .project-icon {
       width: 36px;
@@ -230,8 +311,14 @@
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
+      transition: all 0.3s ease;
     }
-    .project-icon i { font-size: 1rem; color: #1f6eb0; }
+    .project-row:hover .project-icon {
+      background: #1f6eb0;
+      transform: rotate(5deg) scale(1.05);
+    }
+    .project-row:hover .project-icon i { color: white; }
+    .project-icon i { font-size: 1rem; color: #1f6eb0; transition: 0.3s; }
 
     .project-details { flex: 1; }
     .project-details h3 { font-size: 0.9rem; font-weight: 700; color: #0b2f48; }
@@ -244,7 +331,9 @@
       border-radius: 20px;
       color: #1f5e8a;
       font-weight: 600;
+      transition: 0.3s;
     }
+    .project-row:hover .project-cat { background: #1f6eb0; color: white; }
 
     .project-tech {
       display: flex;
@@ -257,7 +346,9 @@
       border-radius: 20px;
       font-size: 0.55rem;
       color: #1f5e8a;
+      transition: 0.3s;
     }
+    .project-row:hover .project-tech span { background: #e0ecf5; }
 
     .exp-block {
       background: #f6fbfe;
@@ -265,6 +356,12 @@
       padding: 1rem 1.2rem;
       margin-bottom: 0.8rem;
       border-left: 4px solid #1f6eb0;
+      transition: all 0.3s ease;
+    }
+    .exp-block:hover {
+      transform: translateX(8px);
+      background: white;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     }
     .exp-company { font-size: 1rem; font-weight: 700; color: #0d3552; }
     .exp-role { font-weight: 600; color: #2b6c9e; font-size: 0.75rem; margin: 0.2rem 0 0.3rem; }
@@ -278,6 +375,11 @@
       border-radius: 1rem;
       border: 1px solid #cce0f2;
       font-size: 0.85rem;
+      transition: all 0.3s ease;
+    }
+    .education-card:hover {
+      transform: scale(1.01);
+      background: #eef4fc;
     }
 
     .footer-cta {
@@ -286,17 +388,23 @@
       margin-top: 2rem;
       padding: 1.2rem;
       text-align: center;
+      transition: all 0.3s ease;
+    }
+    .footer-cta:hover {
+      background: #e2ecf5;
+      transform: scale(1.01);
     }
 
     @media (max-width: 680px) {
       .content { padding: 1rem; }
       .hero-card { padding: 1.2rem; }
       .project-row { flex-direction: column; align-items: flex-start; }
+      .project-row:hover { transform: translateX(5px); }
     }
   </style>
 </head>
 <body>
-<nav>
+<nav id="navbar">
   <a href="#about">About</a>
   <a href="#skills">Tech</a>
   <a href="#projects">Projects</a>
@@ -334,7 +442,7 @@
       </div>
     </section>
 
-    <section id="skills">
+    <section id="skills" class="reveal">
       <h2><i class="fas fa-microchip"></i> Technical Toolkit</h2>
       <div class="skills-container">
         <span class="skill-pill">PHP / Laravel</span><span class="skill-pill">Vue.js 2/3</span>
@@ -346,7 +454,7 @@
       </div>
     </section>
 
-    <section id="projects">
+    <section id="projects" class="reveal">
       <h2><i class="fas fa-folder-open"></i> Project Portfolio</h2>
       <p style="font-size: 0.75rem; color: #2c577c; margin-bottom: 0.8rem;">20+ custom systems delivered. Here are some of my projects:</p>
       
@@ -367,7 +475,7 @@
       </div>
     </section>
 
-    <section id="experience">
+    <section id="experience" class="reveal">
       <h2><i class="fas fa-briefcase"></i> Work Experience</h2>
       
       <div class="exp-block">
@@ -417,8 +525,8 @@
       </div>
     </section>
 
-    <section id="education">
-      <h2><i class="fas fa-graduation-cap"></i> education</h2>
+    <section id="education" class="reveal">
+      <h2><i class="fas fa-graduation-cap"></i> Education</h2>
       <div class="education-card">
         <strong>Bachelor of Science in Information Technology</strong><br>
         Nueva Ecija University of Science and Technology · June 2014 – April 2018<br>
@@ -426,7 +534,7 @@
       </div>
     </section>
 
-    <footer class="footer-cta">
+    <footer class="footer-cta reveal">
       <i class="fas fa-comments" style="font-size: 1.2rem;"></i>
       <h3 style="margin: 0.4rem 0 0.2rem; font-size: 1rem;">Let's talk about your project</h3>
       <p style="font-size: 0.75rem;">RPT System? Inventory? ERP? Dashboard? Tell me what you need — I'll build it.</p>
@@ -434,5 +542,36 @@
     </footer>
   </div>
 </div>
+
+<script>
+  // Scroll Animation - nagfa-fade in habang nagsscroll down
+  const reveals = document.querySelectorAll('.reveal');
+  
+  function revealOnScroll() {
+    for (let i = 0; i < reveals.length; i++) {
+      const windowHeight = window.innerHeight;
+      const revealTop = reveals[i].getBoundingClientRect().top;
+      const revealPoint = 100;
+      
+      if (revealTop < windowHeight - revealPoint) {
+        reveals[i].classList.add('active');
+      }
+    }
+  }
+  
+  // Navbar scroll effect - lumiliit ang navbar pag nagscroll
+  window.addEventListener('scroll', function() {
+    const navbar = document.getElementById('navbar');
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+    revealOnScroll();
+  });
+  
+  // Initial trigger
+  revealOnScroll();
+</script>
 </body>
 </html>
