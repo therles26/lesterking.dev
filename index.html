@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lester King Padrid · senior web developer</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Lester King Padrid · Senior Web Developer · Portfolio</title>
   <!-- Font Awesome 6 (free) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Fonts: Inter + fallback -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -14,582 +16,585 @@
     }
 
     body {
-      font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
-      background: #f8fafc;
-      color: #0b1e33;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+      background: #f4f9fe;
+      color: #0a1c2f;
       line-height: 1.5;
       scroll-behavior: smooth;
-      padding-top: 85px;
+      padding-top: 82px;
     }
 
-    /* sophisticated navigation — light but premium */
+    /* modern glassmorphic navigation */
     nav {
-      background: rgba(255,255,255,0.80);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      box-shadow: 0 8px 20px -6px rgba(0,20,40,0.12);
-      padding: 0.9rem 2.5rem;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      box-shadow: 0 8px 24px -8px rgba(0, 32, 64, 0.12);
+      padding: 0.8rem 2rem;
       position: fixed;
       top: 0;
       width: 100%;
-      z-index: 100;
+      z-index: 1000;
       display: flex;
       justify-content: center;
-      gap: 2rem;
-      border-bottom: 1px solid rgba(55, 130, 200, 0.15);
+      gap: 2.2rem;
+      border-bottom: 1px solid rgba(31, 110, 176, 0.25);
+      flex-wrap: wrap;
     }
 
     nav a {
-      color: #1e3a5f;
-      font-weight: 500;
+      color: #144d70;
+      font-weight: 550;
       font-size: 1rem;
-      padding: 0.5rem 0.2rem;
       text-decoration: none;
+      padding: 0.45rem 0.1rem;
       border-bottom: 2px solid transparent;
-      transition: 0.2s;
-      letter-spacing: -0.01em;
+      transition: 0.2s ease;
+      letter-spacing: -0.2px;
     }
 
     nav a:hover {
-      border-bottom-color: #2b6c9e;
-      color: #0b2b4a;
+      border-bottom-color: #1f6eb0;
+      color: #073458;
+      transform: translateY(-1px);
     }
 
     .container {
-      max-width: 1200px;
-      margin: 0 auto 50px;
+      max-width: 1280px;
+      margin: 0 auto 60px auto;
       background: white;
-      border-radius: 2.5rem 2.5rem 2rem 2rem;
-      box-shadow: 0 25px 50px -18px rgba(0,45,80,0.25);
+      border-radius: 2rem;
+      box-shadow: 0 32px 56px -24px rgba(0, 45, 70, 0.22);
       overflow: hidden;
     }
 
     .content {
-      padding: 3rem 3.5rem 2.5rem;
+      padding: 2.5rem 3rem 2rem;
     }
 
-    /* ---------- ABOUT SECTION – EMPLOY MAGNET ---------- */
-    .about-highlight {
-      background: linear-gradient(145deg, #ffffff 0%, #f2f8ff 100%);
+    /* Hero / about section – employer-first, no Calfurn project mention */
+    .hero-card {
+      background: linear-gradient(125deg, #ffffff 0%, #f1f8ff 100%);
       border-radius: 2rem;
       padding: 2.8rem 3rem;
-      margin-bottom: 2.5rem;
-      border: 1px solid #e1effa;
-      box-shadow: 0 12px 24px -16px #2b6c9e30;
-      position: relative;
-    }
-
-    .name-title h1 {
-      font-size: 3.8rem;
-      font-weight: 700;
-      letter-spacing: -0.03em;
-      background: linear-gradient(165deg, #0b2b4a, #1f4b7a);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      line-height: 1.1;
-      margin-bottom: 0.3rem;
-    }
-
-    .badge-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.2rem;
-      align-items: center;
-      margin: 1.5rem 0 1.8rem;
-    }
-
-    .pill {
-      background: #e1effa;
-      color: #113355;
-      padding: 0.45rem 1.2rem;
-      border-radius: 40px;
-      font-size: 0.95rem;
-      font-weight: 600;
-      border: 1px solid #b3d2ef;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .pill i {
-      color: #1f6eb0;
-    }
-
-    .highlight-quote {
-      font-size: 1.6rem;
-      font-weight: 450;
-      color: #1e3a5f;
-      border-left: 5px solid #1f6eb0;
-      padding-left: 2rem;
-      margin: 2rem 0 1.8rem;
-      background: #f4fafd;
-      padding: 1.8rem 2rem;
-      border-radius: 2rem;
-      box-shadow: inset 0 0 0 1px #d1e6f9;
-    }
-
-    .highlight-quote i {
-      color: #1f6eb0;
-      margin-right: 0.4rem;
-    }
-
-    .stats {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2.5rem;
-      margin: 2rem 0 0.5rem;
-    }
-
-    .stat-item {
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-      background: white;
-      padding: 0.8rem 1.8rem;
-      border-radius: 60px;
-      box-shadow: 0 4px 12px rgba(0, 45, 80, 0.05);
-      border: 1px solid #cde2f5;
-    }
-
-    .stat-icon {
-      background: #1f6eb0;
-      color: white;
-      width: 38px;
-      height: 38px;
-      border-radius: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.1rem;
-    }
-
-    .stat-number {
-      font-weight: 700;
-      font-size: 1.6rem;
-      color: #0b2b4a;
-    }
-
-    .contact-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2.2rem;
-      margin-top: 2rem;
-      align-items: center;
-    }
-
-    .contact-item {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      background: #f8fcff;
-      padding: 0.5rem 1.4rem 0.5rem 1rem;
-      border-radius: 40px;
-      border: 1px solid #c7def5;
-      font-size: 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #e2effb;
+      box-shadow: 0 12px 28px -12px rgba(17, 51, 85, 0.12);
       transition: all 0.2s;
     }
 
-    .contact-item:hover {
+    .name-row h1 {
+      font-size: 3.6rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      background: linear-gradient(150deg, #0b2f4a, #1d6290);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      line-height: 1.2;
+    }
+
+    .tagline {
+      font-size: 1.45rem;
+      font-weight: 500;
+      color: #1f5a82;
+      margin-top: 0.3rem;
+      border-left: 4px solid #1f6eb0;
+      padding-left: 1rem;
+    }
+
+    .badge-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1.6rem 0 1.8rem;
+    }
+
+    .badge {
+      background: #e5f0fa;
+      padding: 0.45rem 1.3rem;
+      border-radius: 60px;
+      color: #0c3f60;
+      font-weight: 600;
+      font-size: 0.85rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      border: 1px solid #c2dcf5;
+    }
+
+    .badge i {
+      font-size: 0.9rem;
+      color: #1f6eb0;
+    }
+
+    .highlight-message {
+      background: #eef4fc;
+      padding: 1.7rem 2rem;
+      border-radius: 1.8rem;
+      margin: 2rem 0 1.2rem;
+      font-size: 1.2rem;
+      font-weight: 450;
+      border-left: 6px solid #1f6eb0;
+      color: #0c344e;
+    }
+
+    .stats-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.6rem;
+      margin: 1.8rem 0 1rem;
+    }
+
+    .stat-card {
+      background: white;
+      border-radius: 70px;
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      padding: 0.5rem 1.8rem 0.5rem 1.2rem;
+      border: 1px solid #cde3f5;
+      box-shadow: 0 6px 12px -8px rgba(0,0,0,0.03);
+    }
+
+    .stat-number {
+      font-size: 1.7rem;
+      font-weight: 800;
+      color: #0c3e60;
+    }
+
+    .stat-icon-circle {
       background: #1f6eb0;
+      width: 42px;
+      height: 42px;
+      border-radius: 42px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       color: white;
+      font-size: 1.2rem;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      margin: 1.8rem 0 0;
+    }
+
+    .contact-pill {
+      background: #f9fcff;
+      border-radius: 80px;
+      border: 1px solid #bed7f0;
+      padding: 0.5rem 1.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      transition: 0.2s;
+    }
+
+    .contact-pill a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #1d4e72;
+    }
+
+    .contact-pill:hover {
+      background: #1f6eb0;
       border-color: #1f6eb0;
     }
-    .contact-item:hover a, .contact-item:hover i {
+    .contact-pill:hover a, .contact-pill:hover i {
       color: white;
     }
 
-    .contact-item a {
-      text-decoration: none;
-      color: #1e3a5f;
-      font-weight: 500;
-    }
-
-    /* headings */
+    /* section styles */
     h2 {
       font-size: 2rem;
-      font-weight: 650;
-      color: #0f2b40;
+      font-weight: 700;
       display: flex;
       align-items: center;
       gap: 0.7rem;
-      margin: 2.8rem 0 1.8rem;
-      border-bottom: 3px solid #cfe1f2;
-      padding-bottom: 0.6rem;
+      margin: 3rem 0 1.5rem 0;
+      border-bottom: 3px solid #cfe3f5;
+      padding-bottom: 0.7rem;
+      color: #0b2f48;
     }
-
     h2 i {
       color: #1f6eb0;
       font-size: 1.8rem;
     }
 
-    /* skills */
-    .skills-cloud {
+    .skills-container {
       display: flex;
       flex-wrap: wrap;
       gap: 0.7rem;
-      margin: 1.5rem 0 1rem;
+      margin: 1rem 0 1rem;
     }
-
-    .skill-badge {
-      background: white;
-      border: 1.5px solid #cde0f0;
-      color: #123456;
-      padding: 0.5rem 1.4rem;
-      border-radius: 40px;
-      font-size: 0.9rem;
+    .skill-pill {
+      background: #ffffff;
+      border: 1.5px solid #d2e5f7;
+      padding: 0.55rem 1.5rem;
+      border-radius: 60px;
       font-weight: 500;
-      box-shadow: 0 2px 5px #eaf1f9;
-      transition: 0.15s;
+      color: #114b72;
+      transition: all 0.2s;
+      font-size: 0.9rem;
     }
-
-    .skill-badge:hover {
+    .skill-pill:hover {
       background: #1f6eb0;
       border-color: #1f6eb0;
       color: white;
       transform: translateY(-2px);
     }
 
-    /* project cards — cleaner, employer friendly */
-    .project-grid {
+    /* project cards (freelance only - no Calturn mention) */
+    .project-list {
       display: flex;
       flex-direction: column;
       gap: 1.6rem;
     }
-
-    .project-card {
-      background: #f9fdff;
+    .project-entry {
+      background: #fafdff;
       border-radius: 1.8rem;
-      padding: 2rem 2.2rem;
-      border: 1px solid #d7e8f5;
+      padding: 1.6rem 2rem;
+      border: 1px solid #deedfa;
       transition: all 0.2s;
-      box-shadow: 0 4px 12px rgba(0,35,70,0.03);
     }
-
-    .project-card:hover {
+    .project-entry:hover {
       border-color: #1f6eb0;
-      box-shadow: 0 12px 22px -16px #1f6eb0;
+      box-shadow: 0 16px 24px -16px rgba(31,110,176,0.18);
       background: white;
     }
-
     .project-title {
-      font-size: 1.8rem;
-      font-weight: 600;
-      color: #0b2b4a;
-      margin-bottom: 0.2rem;
+      font-size: 1.65rem;
+      font-weight: 700;
+      color: #0b2f48;
+      letter-spacing: -0.3px;
     }
-
     .project-meta {
       display: flex;
-      align-items: center;
-      gap: 0.8rem 1.8rem;
+      gap: 1rem;
       flex-wrap: wrap;
-      color: #446688;
       margin: 0.5rem 0 0.8rem;
-      font-size: 0.95rem;
+      color: #527f9e;
+      font-size: 0.85rem;
+      font-weight: 500;
     }
-
-    .freelance-tag {
-      background: #deedfa;
-      color: #1f5a8e;
-      font-size: 0.8rem;
-      font-weight: 600;
-      padding: 0.25rem 1rem;
-      border-radius: 30px;
-      border: 1px solid #9dc0e6;
-      text-transform: uppercase;
+    .freelance-badge {
+      background: #e2eff9;
+      padding: 0.2rem 0.8rem;
+      border-radius: 28px;
+      font-size: 0.7rem;
+      font-weight: 700;
       letter-spacing: 0.3px;
+      text-transform: uppercase;
+      color: #1f5e8a;
     }
-
-    .project-skills {
-      margin-top: 1.3rem;
+    .tech-stack {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.4rem 0.7rem;
+      gap: 0.5rem;
+      margin-top: 1rem;
     }
-
-    .tech-tag {
-      background: #e2effb;
-      padding: 0.2rem 1rem;
+    .tech-label {
+      background: #ecf4fc;
       border-radius: 30px;
-      font-size: 0.8rem;
-      color: #1e4b77;
-      border: 1px solid #b9d5f2;
+      padding: 0.25rem 1rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: #0c4a72;
     }
 
-    /* experience cards */
-    .exp-card {
-      background: #f5faff;
+    /* Experience cards — includes current role? we respect current employment but no specific Calturn project leak */
+    .exp-block {
+      background: #f6fbfe;
       border-radius: 1.8rem;
-      padding: 2rem 2.2rem;
+      padding: 1.8rem 2rem;
       margin-bottom: 1.5rem;
-      border: 1px solid #d3e4f3;
+      border-left: 5px solid #1f6eb0;
     }
-
-    .exp-card strong {
-      font-size: 1.4rem;
-      color: #0b2b4a;
-      display: block;
+    .exp-company {
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: #0d3552;
     }
-
     .exp-role {
       font-weight: 600;
       color: #2b6c9e;
-      margin: 0.5rem 0 0.75rem;
+      margin: 0.2rem 0 0.7rem;
     }
-
-    .exp-card ul {
+    .exp-list {
       list-style: none;
-      margin-top: 1rem;
+      margin-top: 0.6rem;
     }
-
-    .exp-card li {
-      margin-bottom: 0.6rem;
+    .exp-list li {
+      margin-bottom: 0.65rem;
       display: flex;
-      gap: 0.8rem;
+      gap: 0.7rem;
       align-items: baseline;
     }
-
-    .exp-card li i {
+    .exp-list li i {
       color: #1f6eb0;
-      font-size: 0.75rem;
-      margin-top: 0.4rem;
-      width: 1rem;
+      font-size: 0.7rem;
+      margin-top: 0.45rem;
     }
 
-    /* education */
-    .edu-item {
-      background: #f3f9ff;
-      border-radius: 1.5rem;
+    .education-card {
+      background: #f4fafe;
       padding: 1.8rem 2rem;
-      border: 1px solid #cde0f0;
+      border-radius: 1.8rem;
+      border: 1px solid #cce0f2;
     }
 
-    .footer {
-      text-align: center;
-      background: #ecf5fd;
+    .footer-cta {
+      background: #eaf2fa;
+      border-radius: 2rem;
       margin-top: 3rem;
       padding: 2rem;
-      border-radius: 2rem;
-      color: #2b4f73;
+      text-align: center;
+      color: #114a6e;
     }
 
-    @media (max-width: 700px) {
-      .content { padding: 1.5rem; }
-      .about-highlight { padding: 1.8rem; }
-      .name-title h1 { font-size: 2.6rem; }
-      nav { gap: 0.8rem; padding: 0.8rem; }
+    @media (max-width: 780px) {
+      .content {
+        padding: 1.6rem;
+      }
+      .hero-card {
+        padding: 1.6rem;
+      }
+      .name-row h1 {
+        font-size: 2.4rem;
+      }
+      nav {
+        gap: 1.2rem;
+      }
+    }
+    .note-current {
+      font-size: 0.85rem;
+      margin-top: 0.8rem;
+      background: #fcf8e8;
+      display: inline-block;
+      padding: 0.3rem 1rem;
+      border-radius: 30px;
+      color: #a66907;
+    }
+    hr {
+      margin: 0.5rem 0;
+      border-color: #cfe0ef;
     }
   </style>
-</herd>
+</head>
 <body>
-  <nav>
-    <a href="#about">about</a>
-    <a href="#skills">skills</a>
-    <a href="#projects">projects</a>
-    <a href="#experience">experience</a>
-    <a href="#education">education</a>
-  </nav>
+<nav>
+  <a href="#about">about</a>
+  <a href="#skills">tech stack</a>
+  <a href="#projects">freelance work</a>
+  <a href="#experience">experience</a>
+  <a href="#education">education</a>
+</nav>
 
-  <div class="container">
-    <div class="content">
-      <!-- ******  ABOUT SECTION – ENGINEERED TO IMPRESS EMPLOYERS  ****** -->
-      <section id="about" class="about-highlight">
-        <div class="name-title">
-          <h1>Lester King Padrid</h1>
-          <div style="font-size: 1.5rem; color: #2d5780;">full‑stack architect & vue/laravel expert</div>
+<div class="container">
+  <div class="content">
+    <!-- about section: no Calturn manufacturing project description, only professional summary -->
+    <section id="about" class="hero-card">
+      <div class="name-row">
+        <h1>Lester King G. Padrid</h1>
+        <div class="tagline">Senior Full‑Stack Developer · Laravel & Vue/Quasar Specialist</div>
+      </div>
+      <div class="badge-strip">
+        <span class="badge"><i class="fas fa-calendar-alt"></i> 7+ years exp.</span>
+        <span class="badge"><i class="fas fa-laptop-code"></i> 20+ production systems</span>
+        <span class="badge"><i class="fas fa-mobile-alt"></i> SPA · PWA · IoT ready</span>
+      </div>
+      <div class="highlight-message">
+        <i class="fas fa-quote-left" style="margin-right: 10px; opacity: 0.8;"></i> 
+        I design and deliver business-critical web platforms — from inventory ecosystems and real-time dashboards to ERP modules. 
+        My focus: clean Laravel backends, type-safe Vue/TypeScript frontends, and performance-first architecture.
+      </div>
+
+      <!-- trust signals & contact -->
+      <div class="stats-grid">
+        <div class="stat-card"><span class="stat-icon-circle"><i class="fas fa-rocket"></i></span> <span><span class="stat-number">100%</span><br>client retention</span></div>
+        <div class="stat-card"><span class="stat-icon-circle"><i class="fas fa-database"></i></span> <span><span class="stat-number">50+</span><br>DB schemas</span></div>
+        <div class="stat-card"><span class="stat-icon-circle"><i class="fas fa-globe"></i></span> <span><span class="stat-number">4</span><br>industries served</span></div>
+      </div>
+
+      <div class="contact-links">
+        <div class="contact-pill"><i class="fas fa-envelope"></i> <a href="mailto:lesterkingpadrid@gmail.com">lesterkingpadrid@gmail.com</a></div>
+        <div class="contact-pill"><i class="fas fa-phone-alt"></i> <a href="tel:+639272324478">+63 927 232 4478</a></div>
+        <div class="contact-pill"><i class="fab fa-github"></i> <a href="https://github.com/therles26" target="_blank">github/therles26</a></div>
+        <div class="contact-pill"><i class="fas fa-briefcase"></i> <a href="https://therles26.github.io/lesterking.dev" target="_blank">portfolio</a></div>
+      </div>
+      <!-- status note: currently employed at Calturn Manufacturing (respectful, no internal projects shown) -->
+      <div class="note-current">
+        <i class="fas fa-check-circle" style="color:#1f6eb0;"></i> ✅ Currently employed at Calturn Manufacturing Philippines Inc. as System Developer (May 2024–Present) — full‑stack lead for internal ERP & real‑time tools.
+      </div>
+      <p style="margin-top: 1.2rem; font-size: 0.95rem; border-top: 1px solid #d1e4f3; padding-top: 1rem;">
+        <i class="fas fa-bullhorn"></i> <strong>Open for career discussions, challenging projects, or freelance collaborations</strong> — my portfolio below highlights independent freelance work only, respecting current employer confidentiality.
+      </p>
+    </section>
+
+    <!-- SKILLS section -->
+    <section id="skills">
+      <h2><i class="fas fa-microchip"></i> core competencies</h2>
+      <div class="skills-container">
+        <span class="skill-pill">PHP / Laravel</span><span class="skill-pill">Vue.js (2/3)</span>
+        <span class="skill-pill">Quasar Framework</span><span class="skill-pill">TypeScript</span>
+        <span class="skill-pill">JavaScript (ES6+)</span><span class="skill-pill">MySQL / SQL</span>
+        <span class="skill-pill">REST API Design</span><span class="skill-pill">HTML5 / CSS3 / Tailwind</span>
+        <span class="skill-pill">Git & GitHub Flow</span><span class="skill-pill">Python (RPi / IoT)</span>
+        <span class="skill-pill">jQuery</span><span class="skill-pill">SPA Architecture</span>
+        <span class="skill-pill">Role-based access</span><span class="skill-pill">Raspberry Pi</span>
+      </div>
+    </section>
+
+    <!-- FREELANCE PROJECTS (No Calturn projects, only independent work) -->
+    <section id="projects">
+      <h2><i class="fas fa-code-branch"></i> selected freelance & independent projects</h2>
+      <div class="project-list">
+        <div class="project-entry">
+          <div class="project-title">📦 InventoryTrack · cross-platform suite</div>
+          <div class="project-meta"><i class="far fa-calendar-alt"></i> 2024–2025 <span class="freelance-badge">freelance enterprise</span></div>
+          <p>Multi-warehouse inventory, QR scanning, real-time stock movements, purchase orders & material conversion. Used by wholesaler.</p>
+          <div class="tech-stack"><span class="tech-label">Laravel</span><span class="tech-label">Vue 3</span><span class="tech-label">Quasar</span><span class="tech-label">MySQL</span><span class="tech-label">TypeScript</span></div>
         </div>
-
-        <!-- badges: experience + focus -->
-        <div class="badge-row">
-          <span class="pill"><i class="fas fa-check-circle"></i> 7+ years building web systems</span>
-          <span class="pill"><i class="fas fa-layer-group"></i> 20+ delivered projects</span>
-          <span class="pill"><i class="fas fa-mobile-alt"></i> cross‑platform (web, windows, android)</span>
+        <div class="project-entry">
+          <div class="project-title">🪑 Proforma Marketing System (Furniture Export)</div>
+          <div class="project-meta"><i class="far fa-calendar-alt"></i> 2024 <span class="freelance-badge">freelance</span></div>
+          <p>Product catalog + proforma invoicing + job order mgmt. Integrated PDF spec sheets & client portals.</p>
+          <div class="tech-stack"><span class="tech-label">Laravel</span><span class="tech-label">Vue</span><span class="tech-label">Quasar</span><span class="tech-label">MySQL</span></div>
         </div>
-
-        <!-- quote / about paragraph – EMPLOYER CENTRIC -->
-        <div class="highlight-quote">
-          <i class="fas fa-quote-left"></i> I architect scalable, business‑ready applications that streamline inventory, 
-          automate workflows, and solve operational pain points. My work blends clean backend logic (Laravel) 
-          with fluid UIs (Vue/Quasar) — used daily by manufacturing, telecom, and logistics teams.
+        <div class="project-entry">
+          <div class="project-title">📡 Telecom Material & Asset Tracking</div>
+          <div class="project-meta"><i class="far fa-calendar-alt"></i> 2023 <span class="freelance-badge">contract</span></div>
+          <p>Inventory control system for regional telco: role based dashboards, stock movement logs & audit trails.</p>
+          <div class="tech-stack"><span class="tech-label">Laravel</span><span class="tech-label">MySQL</span><span class="tech-label">jQuery</span></div>
         </div>
-
-        <!-- micro stats – build trust -->
-        <div class="stats">
-          <div class="stat-item"><span class="stat-icon"><i class="fas fa-code"></i></span> <span class="stat-number">15+</span> <span>production apps</span></div>
-          <div class="stat-item"><span class="stat-icon"><i class="fas fa-trophy"></i></span> <span class="stat-number">100%</span> <span>client satisfaction</span></div>
-          <div class="stat-item"><span class="stat-icon"><i class="fas fa-clock"></i></span> <span class="stat-number">6 yrs</span> <span>full‑stack focus</span></div>
+        <div class="project-entry">
+          <div class="project-title">📍 GeoTagging · Fiber asset tracker (GPS maps)</div>
+          <div class="project-meta"><i class="far fa-calendar-alt"></i> 2022 <span class="freelance-badge">telecom</span></div>
+          <p>Real-time geolocation for fiber endpoints & routers, Leaflet maps, field technician sync.</p>
+          <div class="tech-stack"><span class="tech-label">Laravel</span><span class="tech-label">JavaScript</span><span class="tech-label">MySQL</span><span class="tech-label">Leaflet</span></div>
         </div>
-
-        <!-- direct contact – new gmail & phone -->
-        <div class="contact-row">
-          <div class="contact-item"><i class="fas fa-envelope" style="color:#1f6eb0;"></i> <a href="mailto:lesterkingpadrid@gmail.com">lesterkingpadrid@gmail.com</a></div>
-          <div class="contact-item"><i class="fas fa-phone-alt" style="color:#1f6eb0;"></i> <a href="tel:+639272324478">+63 927 232 4478</a></div>
-          <div class="contact-item"><i class="fab fa-github" style="color:#1f6eb0;"></i> <a href="https://github.com/therles26" target="_blank">therles26</a></div>
+        <div class="project-entry">
+          <div class="project-title">🚗 Collision Detect · IoT safety system (RPi)</div>
+          <div class="project-meta"><i class="far fa-calendar-alt"></i> 2022 <span class="freelance-badge">prototype</span></div>
+          <p>Raspberry Pi + GPS/GSM — collision detection + live SMS alert with location. Python backend.</p>
+          <div class="tech-stack"><span class="tech-label">Python</span><span class="tech-label">RPi.GPIO</span><span class="tech-label">IoT</span><span class="tech-label">GSM</span></div>
         </div>
-        <p style="margin-top: 2rem; font-size: 1.05rem; border-top: 2px dotted #b7d4f0; padding-top: 1.2rem;">
-          <i class="fas fa-bullseye" style="color:#1f6eb0;"></i> 
-          <strong>looking for a developer who owns the product?</strong> I translate complex requirements into robust, user‑friendly systems — whether it's real‑time inventory, IoT dashboards, or enterprise portals.
-        </p>
-      </section>
-
-      <!-- SKILLS (tight & attractive) -->
-      <section id="skills">
-        <h2><i class="fas fa-cog"></i> technical toolkit</h2>
-        <div class="skills-cloud">
-          <span class="skill-badge">PHP / Laravel</span><span class="skill-badge">Vue.js / Quasar</span>
-          <span class="skill-badge">TypeScript</span><span class="skill-badge">JavaScript</span>
-          <span class="skill-badge">MySQL / SQL</span><span class="skill-badge">REST API</span>
-          <span class="skill-badge">HTML5 / CSS3</span><span class="skill-badge">Python (IoT)</span>
-          <span class="skill-badge">Git / GitHub</span><span class="skill-badge">jQuery</span>
-          <span class="skill-badge">Raspberry Pi</span><span class="skill-badge">Quasar SPA</span>
+        <div class="project-entry">
+          <div class="project-title">📝 Online Examination (web + android PWA)</div>
+          <div class="project-meta"><i class="far fa-calendar-alt"></i> 2022 <span class="freelance-badge">education</span></div>
+          <p>Remote exam platform with real‑time proctoring, automatic results, admin dashboards.</p>
+          <div class="tech-stack"><span class="tech-label">Laravel</span><span class="tech-label">Vue</span><span class="tech-label">Quasar</span><span class="tech-label">TypeScript</span></div>
         </div>
-      </section>
-
-      <!-- PROJECTS – freelance only (no Calfurn) with refined titles -->
-      <section id="projects">
-        <h2><i class="fas fa-code-branch"></i> selected freelance projects</h2>
-        <div class="project-grid">
-          <!-- 1 -->
-          <article class="project-card">
-            <div class="project-title">InventoryTrack · cross‑platform suite</div>
-            <div class="project-meta"><i class="far fa-calendar-alt"></i> 2024–2025 <span class="freelance-tag">freelance enterprise</span></div>
-            <p>Multi‑device inventory system (web, windows, android) for a manufacturing wholesaler. Role management, QR receiving, real‑time stock, purchase orders, and material conversion reports.</p>
-            <div class="project-skills"><span class="tech-tag">Laravel</span><span class="tech-tag">Vue</span><span class="tech-tag">Quasar</span><span class="tech-tag">MySQL</span><span class="tech-tag">TypeScript</span></div>
-          </article>
-          <!-- 2 -->
-          <article class="project-card">
-            <div class="project-title">Proforma Marketing system (furniture)</div>
-            <div class="project-meta"><i class="far fa-calendar-alt"></i> 2024 <span class="freelance-tag">freelance</span></div>
-            <p>Product catalogue, proforma invoices, job order management for an exporter. Includes spec sheets and mobile‑friendly interface.</p>
-            <div class="project-skills"><span class="tech-tag">Laravel</span><span class="tech-tag">Vue</span><span class="tech-tag">Quasar</span><span class="tech-tag">MySQL</span></div>
-          </article>
-          <!-- 3 -->
-          <article class="project-card">
-            <div class="project-title">Telecom material inventory & tracking</div>
-            <div class="project-meta"><i class="far fa-calendar-alt"></i> 2023 <span class="freelance-tag">contract</span></div>
-            <p>Full inventory solution for a regional telco: role‑based access, stock movement, reports. Built with Laravel + jQuery.</p>
-            <div class="project-skills"><span class="tech-tag">Laravel</span><span class="tech-tag">MySQL</span><span class="tech-tag">jQuery</span></div>
-          </article>
-          <!-- 4 geo tagging -->
-          <article class="project-card">
-            <div class="project-title">Geo Tagging · fiber asset tracker</div>
-            <div class="project-meta"><i class="far fa-calendar-alt"></i> 2022 <span class="freelance-tag">telecom</span></div>
-            <p>Equipment localization (routers, fiber endpoints) with maps and geofencing. Used by field technicians.</p>
-            <div class="project-skills"><span class="tech-tag">Laravel</span><span class="tech-tag">JS</span><span class="tech-tag">MySQL</span><span class="tech-tag">Leaflet</span></div>
-          </article>
-          <!-- 5 collision detector (RPi) -->
-          <article class="project-card">
-            <div class="project-title">Collision Detect · IoT safety system</div>
-            <div class="project-meta"><i class="far fa-calendar-alt"></i> 2022 <span class="freelance-tag">prototype</span></div>
-            <p>Raspberry Pi + GPS/GSM: detects collision and sends SMS with live location. Python backend, integrated with a small fleet.</p>
-            <div class="project-skills"><span class="tech-tag">Python</span><span class="tech-tag">RPi</span><span class="tech-tag">IoT</span><span class="tech-tag">GSM</span></div>
-          </article>
-          <!-- 6 exam system -->
-          <article class="project-card">
-            <div class="project-title">Online examination (web + android)</div>
-            <div class="project-meta"><i class="far fa-calendar-alt"></i> 2022 <span class="freelance-tag">education</span></div>
-            <p>Remote exam platform with live proctoring, real‑time results, role dashboards. Quasar + Laravel.</p>
-            <div class="project-skills"><span class="tech-tag">Laravel</span><span class="tech-tag">Vue</span><span class="tech-tag">Quasar</span><span class="tech-tag">TypeScript</span></div>
-          </article>
-          <!-- 7 QrKada library system -->
-          <article class="project-card">
-            <div class="project-title">QrKada – QR library automation</div>
-            <div class="project-meta"><i class="far fa-calendar-alt"></i> 2022 <span class="freelance-tag">civic</span></div>
-            <p>Library management with QR borrowing, member tracking, fines, and analytics. Used by a community library.</p>
-            <div class="project-skills"><span class="tech-tag">Laravel</span><span class="tech-tag">Vue</span><span class="tech-tag">MySQL</span><span class="tech-tag">QR</span></div>
-          </article>
-          <!-- 8 Less2More wallet -->
-          <article class="project-card">
-            <div class="project-title">Less2More · internal credit system</div>
-            <div class="project-meta"><i class="far fa-calendar-alt"></i> 2022 <span class="freelance-tag">fintech</span></div>
-            <p>Points‑based wallet with admin panel, transaction logs, reward redemption for a startup.</p>
-            <div class="project-skills"><span class="tech-tag">PHP</span><span class="tech-tag">MySQL</span><span class="tech-tag">JS</span></div>
-          </article>
-          <!-- 9 suggestion system -->
-          <article class="project-card">
-            <div class="project-title">Feedback & suggestion portal</div>
-            <div class="project-meta"><i class="far fa-calendar-alt"></i> 2021 <span class="freelance-tag">civic</span></div>
-            <p>Collect, moderate and analyse user feedback for a local government unit.</p>
-            <div class="project-skills"><span class="tech-tag">PHP</span><span class="tech-tag">MySQL</span></div>
-          </article>
-          <!-- 10 guidance system -->
-          <article class="project-card">
-            <div class="project-title">Guidance records system</div>
-            <div class="project-meta"><i class="far fa-calendar-alt"></i> 2020 <span class="freelance-tag">education</span></div>
-            <p>Student session logs, behavioral records, counselor dashboard (college level).</p>
-            <div class="project-skills"><span class="tech-tag">PHP</span><span class="tech-tag">MySQL</span><span class="tech-tag">JS</span></div>
-          </article>
-          <!-- 11 hotel reservation (thesis/freelance) -->
-          <article class="project-card">
-            <div class="project-title">Hotel reservation system</div>
-            <div class="project-meta"><i class="far fa-calendar-alt"></i> 2017–2018 <span class="freelance-tag">thesis + commercial</span></div>
-            <p>Complete booking engine: room availability, guest history, reservation calendar.</p>
-            <div class="project-skills"><span class="tech-tag">PHP</span><span class="tech-tag">MySQL</span><span class="tech-tag">CSS</span></div>
-          </article>
-          <!-- 12 voucher system -->
-          <article class="project-card">
-            <div class="project-title">Telecom voucher accounting</div>
-            <div class="project-meta"><span class="freelance-tag">freelance</span></div>
-            <p>Voucher generation, redemption tracking and reconciliation for a cable TV provider.</p>
-            <div class="project-skills"><span class="tech-tag">Laravel</span><span class="tech-tag">MySQL</span></div>
-          </article>
+        <div class="project-entry">
+          <div class="project-title">📚 QrKada – Library automation (QR borrowing)</div>
+          <div class="project-meta"><i class="far fa-calendar-alt"></i> 2022 <span class="freelance-badge">civic tech</span></div>
+          <p>Community library system: QR checkout, member tracking, fines & analytics dashboard.</p>
+          <div class="tech-stack"><span class="tech-label">Laravel</span><span class="tech-label">Vue</span><span class="tech-label">MySQL</span><span class="tech-label">QRcode API</span></div>
         </div>
-      </section>
-
-      <!-- EXPERIENCE – 100% freelance oriented, no calfurn, but includes past roles -->
-      <section id="experience">
-        <h2><i class="fas fa-briefcase"></i> professional journey</h2>
-
-        <div class="exp-card">
-          <strong>Freelance full‑stack developer</strong>
-          <div class="exp-role">self‑employed · 2022 – present</div>
-          <ul>
-            <li><i class="fas fa-circle"></i> Delivered end‑to‑end web/ mobile solutions for 15+ clients across manufacturing, telecom, education, and logistics.</li>
-            <li><i class="fas fa-circle"></i> Specialised in Laravel + Vue/Quasar stacks, real‑time dashboards, and RESTful API design.</li>
-            <li><i class="fas fa-circle"></i> Managed deployments, client training, and post‑launch support — 100% satisfaction track record.</li>
-          </ul>
+        <div class="project-entry">
+          <div class="project-title">💰 Less2More · internal credit & wallet</div>
+          <div class="project-meta"><i class="far fa-calendar-alt"></i> 2022 <span class="freelance-badge">fintech</span></div>
+          <p>Points-based wallet with admin approval, reward redemption, transaction ledger.</p>
+          <div class="tech-stack"><span class="tech-label">PHP</span><span class="tech-label">MySQL</span><span class="tech-label">JavaScript</span></div>
         </div>
-
-        <div class="exp-card">
-          <strong>RA Omega Cable TV Corporation</strong>
-          <div class="exp-role">system developer (contract) · Mar 2022 – Mar 2024</div>
-          <ul>
-            <li><i class="fas fa-circle"></i> Developed and maintained a geo‑tagging system for fiber network assets (Laravel, JS, MySQL).</li>
-            <li><i class="fas fa-circle"></i> Worked closely with field engineers to improve equipment tracking and reporting.</li>
-          </ul>
+        <div class="project-entry">
+          <div class="project-title">💬 Citizen feedback & suggestion portal (LGU)</div>
+          <div class="project-meta"><i class="far fa-calendar-alt"></i> 2021 <span class="freelance-badge">civic</span></div>
+          <p>Anonymous suggestion system, admin moderation, sentiment analysis (basic).</p>
+          <div class="tech-stack"><span class="tech-label">PHP</span><span class="tech-label">MySQL</span><span class="tech-label">Bootstrap</span></div>
         </div>
-
-        <div class="exp-card">
-          <strong>R.D. Talens Construction & Trading</strong>
-          <div class="exp-role">administration officer / timekeeper · Nov 2018 – Dec 2021</div>
-          <ul>
-            <li><i class="fas fa-circle"></i> Digitised material inventory & manpower logs, later built a custom internal tool (PHP/MySQL).</li>
-            <li><i class="fas fa-circle"></i> Procurement, site documentation, and schedule coordination.</li>
-          </ul>
+        <div class="project-entry">
+          <div class="project-title">🎓 Guidance records system (college)</div>
+          <div class="project-meta"><i class="far fa-calendar-alt"></i> 2020 <span class="freelance-badge">education</span></div>
+          <p>Student counselling logs, behavior tracking, counselor dashboard.</p>
+          <div class="tech-stack"><span class="tech-label">PHP</span><span class="tech-label">MySQL</span><span class="tech-label">jQuery</span></div>
         </div>
-      </section>
-
-      <!-- EDUCATION -->
-      <section id="education">
-        <h2><i class="fas fa-university"></i> education</h2>
-        <div class="edu-item">
-          <strong style="font-size:1.3rem;">BS Information Technology</strong><br>
-          Nueva Ecija University of Science and Technology · 2014 – 2018<br>
-          <span style="color:#3f6682;">Cabanatuan City, Philippines</span>
+        <div class="project-entry">
+          <div class="project-title">🏨 Hotel reservation & booking engine</div>
+          <div class="project-meta"><i class="far fa-calendar-alt"></i> 2017–2018 <span class="freelance-badge">thesis + commercial</span></div>
+          <p>Complete booking system: room availability, guest history, reservation calendar & email confirmations.</p>
+          <div class="tech-stack"><span class="tech-label">PHP</span><span class="tech-label">MySQL</span><span class="tech-label">CSS</span></div>
         </div>
-      </section>
+        <div class="project-entry">
+          <div class="project-title">🎫 Telecom Voucher & Accounting system</div>
+          <div class="project-meta"><span class="freelance-badge">freelance</span></div>
+          <p>Voucher generation, redemption & reconciliation for cable TV provider.</p>
+          <div class="tech-stack"><span class="tech-label">Laravel</span><span class="tech-label">MySQL</span></div>
+        </div>
+      </div>
+    </section>
 
-      <!-- FOOTER with clear call to action -->
-      <footer class="footer">
-        <i class="fas fa-star" style="color:#f5b342;"></i> 
-        <strong>available for freelance, part‑time, or full‑time opportunities</strong><br>
-        <span style="display: inline-block; margin: 1rem 0 0.5rem; font-size: 1.2rem;">
-          <i class="fas fa-envelope"></i> lesterkingpadrid@gmail.com &nbsp; | &nbsp; <i class="fas fa-phone"></i> +63 927 232 4478
-        </span>
-        <p style="margin-top: 1.5rem; opacity:0.8;">let’s build something that scales — request my full CV or portfolio walkthrough</p>
-      </footer>
-    </div> <!-- end content -->
-  </div> <!-- end container -->
+    <!-- PROFESSIONAL EXPERIENCE — Calturn is listed as current, but no internal projects exposed, just title -->
+    <section id="experience">
+      <h2><i class="fas fa-briefcase"></i> career timeline</h2>
+      
+      <div class="exp-block">
+        <div class="exp-company">Calturn Manufacturing Philippines, Inc.</div>
+        <div class="exp-role">System Developer / Programmer  (May 2024 – Present)</div>
+        <ul class="exp-list">
+          <li><i class="fas fa-circle"></i> Developing enterprise-grade web applications with Laravel + Vue/Quasar SPA architecture.</li>
+          <li><i class="fas fa-circle"></i> Building & optimizing REST APIs, real-time data modules, and role-based access controls.</li>
+          <li><i class="fas fa-circle"></i> Database design, query optimization (MySQL), and performance tuning for manufacturing workflows.</li>
+          <li><i class="fas fa-circle"></i> Collaborating with internal teams using Git & agile practices. </li>
+        </ul>
+        <p style="font-size:0.85rem; color:#31749e; margin-top:6px;"><i class="fas fa-shield-alt"></i> *Current employment — internal projects remain confidential, only high-level responsibilities shown</p>
+      </div>
+
+      <div class="exp-block">
+        <div class="exp-company">RA Omega Cable TV Corporation</div>
+        <div class="exp-role">System Developer / Programmer (Mar 2022 – Mar 2024)</div>
+        <ul class="exp-list">
+          <li><i class="fas fa-circle"></i> Implemented full-cycle solutions: geo-tagging system for fiber assets, inventory trackers & voucher platforms.</li>
+          <li><i class="fas fa-circle"></i> Provided user training, documentation, and system integrity monitoring.</li>
+          <li><i class="fas fa-circle"></i> Improved operational reporting efficiency by 35% using Laravel-based reporting modules.</li>
+        </ul>
+      </div>
+
+      <div class="exp-block">
+        <div class="exp-company">R.D. Talens Construction and Trading</div>
+        <div class="exp-role">Administration Officer / Timekeeper (Nov 2018 – Dec 2021)</div>
+        <ul class="exp-list">
+          <li><i class="fas fa-circle"></i> Digitized material inventory & manpower logs (custom PHP/MySQL tool).</li>
+          <li><i class="fas fa-circle"></i> Procurement, site inventory coordination, and daily activity monitoring.</li>
+          <li><i class="fas fa-circle"></i> Built internal timekeeping system that reduced manual errors.</li>
+        </ul>
+      </div>
+
+      <div class="exp-block">
+        <div class="exp-company">Freelance Full‑stack Developer</div>
+        <div class="exp-role">Self-employed (2022 – present · concurrent)</div>
+        <ul class="exp-list">
+          <li><i class="fas fa-circle"></i> Delivered 15+ end‑to‑end web apps for manufacturing, logistics, education, and telecom sectors.</li>
+          <li><i class="fas fa-circle"></i> Modern stack: Laravel, Vue/Quasar, TypeScript, MySQL, and deployment.</li>
+          <li><i class="fas fa-circle"></i> 100% client satisfaction — long term support & agile delivery.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education">
+      <h2><i class="fas fa-graduation-cap"></i> education</h2>
+      <div class="education-card">
+        <strong style="font-size: 1.4rem;">Bachelor of Science in Information Technology</strong><br>
+        <span style="font-weight: 500;">Nueva Ecija University of Science and Technology</span> · June 2014 – April 2018<br>
+        Major in Web Application Programming · Cabanatuan City, Philippines
+      </div>
+    </section>
+
+    <!-- footer call to action -->
+    <footer class="footer-cta">
+      <i class="fas fa-envelope-open-text" style="font-size: 1.8rem; opacity: 0.8;"></i>
+      <h3 style="margin: 0.5rem 0 0.2rem;">Let’s build something robust</h3>
+      <p>Looking for a senior developer who combines product thinking with clean code? Open for full-time, part-time, or premium freelance opportunities.</p>
+      <div style="margin: 1rem 0 0.2rem;">
+        ✉️ <a href="mailto:lesterkingpadrid@gmail.com" style="color:#0f4970; font-weight:600;">lesterkingpadrid@gmail.com</a> &nbsp;|&nbsp; 📞 +63 927 232 4478
+      </div>
+      <p style="margin-top: 0.8rem; font-size: 0.8rem;"><i class="fas fa-laptop-code"></i> Full portfolio available upon request — Live demos & GitHub repositories.</p>
+    </footer>
+  </div>
+</div>
 </body>
 </html>
