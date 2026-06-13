@@ -3,15 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Lester King Padrid · Senior Full-Stack Developer · Portfolio</title>
+  <title>Lester King Padrid · Senior Full-Stack Developer</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       font-family: 'Inter', system-ui, sans-serif;
@@ -40,19 +36,16 @@
     nav a {
       color: #144d70;
       font-weight: 550;
-      font-size: 0.95rem;
       text-decoration: none;
       padding: 0.45rem 0.1rem;
       border-bottom: 2px solid transparent;
-      transition: 0.2s ease;
+      transition: 0.2s;
     }
 
-    nav a:hover {
-      border-bottom-color: #1f6eb0;
-    }
+    nav a:hover { border-bottom-color: #1f6eb0; }
 
     .container {
-      max-width: 1400px;
+      max-width: 1280px;
       margin: 0 auto 60px;
       background: white;
       border-radius: 2rem;
@@ -60,9 +53,7 @@
       overflow: hidden;
     }
 
-    .content {
-      padding: 2.5rem 3rem;
-    }
+    .content { padding: 2.5rem 3rem; }
 
     .hero-card {
       background: linear-gradient(125deg, #ffffff 0%, #f1f8ff 100%);
@@ -138,18 +129,13 @@
       border: 1px solid #cde3f5;
     }
 
-    .stat-number {
-      font-size: 1.7rem;
-      font-weight: 800;
-      color: #0c3e60;
-    }
-
+    .stat-number { font-size: 1.7rem; font-weight: 800; color: #0c3e60; }
     .stat-icon-circle {
       background: #1f6eb0;
       width: 42px;
       height: 42px;
       border-radius: 42px;
-      display: inline-flex;
+      display: flex;
       align-items: center;
       justify-content: center;
       color: white;
@@ -173,18 +159,9 @@
       transition: 0.2s;
     }
 
-    .contact-pill a {
-      text-decoration: none;
-      font-weight: 500;
-      color: #1d4e72;
-    }
-
-    .contact-pill:hover {
-      background: #1f6eb0;
-    }
-    .contact-pill:hover a, .contact-pill:hover i {
-      color: white;
-    }
+    .contact-pill a { text-decoration: none; font-weight: 500; color: #1d4e72; }
+    .contact-pill:hover { background: #1f6eb0; }
+    .contact-pill:hover a, .contact-pill:hover i { color: white; }
 
     h2 {
       font-size: 2rem;
@@ -197,9 +174,7 @@
       padding-bottom: 0.7rem;
       color: #0b2f48;
     }
-    h2 i {
-      color: #1f6eb0;
-    }
+    h2 i { color: #1f6eb0; }
 
     .skills-container {
       display: flex;
@@ -208,90 +183,76 @@
       margin: 1rem 0;
     }
     .skill-pill {
-      background: #ffffff;
+      background: #fff;
       border: 1.5px solid #d2e5f7;
       padding: 0.55rem 1.5rem;
       border-radius: 60px;
       font-weight: 500;
       color: #114b72;
       font-size: 0.9rem;
+      transition: 0.2s;
     }
-    .skill-pill:hover {
-      background: #1f6eb0;
-      color: white;
-    }
+    .skill-pill:hover { background: #1f6eb0; color: white; }
 
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-      gap: 1.8rem;
+    /* Projects - No images needed, clean list style */
+    .projects-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
       margin: 1.5rem 0;
     }
 
-    .project-card {
+    .project-row {
       background: #fafdff;
-      border-radius: 1.5rem;
+      border-radius: 1.2rem;
       border: 1px solid #deedfa;
-      overflow: hidden;
-      transition: all 0.25s;
+      padding: 1.2rem 1.5rem;
+      transition: all 0.2s;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
     }
 
-    .project-card:hover {
+    .project-row:hover {
       border-color: #1f6eb0;
-      transform: translateY(-4px);
-      box-shadow: 0 20px 30px -16px rgba(31,110,176,0.2);
+      background: white;
+      transform: translateX(5px);
     }
 
-    .project-img {
-      height: 180px;
-      background: linear-gradient(135deg, #15638f, #0a3e5c);
+    .project-icon {
+      width: 50px;
+      height: 50px;
+      background: #e8f0fe;
+      border-radius: 50px;
       display: flex;
       align-items: center;
       justify-content: center;
-      position: relative;
+      flex-shrink: 0;
     }
+    .project-icon i { font-size: 1.5rem; color: #1f6eb0; }
 
-    .project-img i {
-      font-size: 3rem;
-      color: rgba(255,255,255,0.5);
-    }
+    .project-details { flex: 1; }
+    .project-details h3 { font-size: 1.1rem; font-weight: 700; color: #0b2f48; }
+    .project-details p { font-size: 0.85rem; color: #5a7d9a; margin-top: 0.2rem; }
 
-    .project-info {
-      padding: 1.4rem;
-    }
-
-    .project-title {
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: #0b2f48;
-    }
-
-    .project-category {
-      display: inline-block;
-      background: #e8f0fe;
-      font-size: 0.65rem;
-      padding: 0.2rem 0.7rem;
+    .project-cat {
+      font-size: 0.7rem;
+      background: #ecf4fc;
+      padding: 0.2rem 0.8rem;
       border-radius: 20px;
       color: #1f5e8a;
-      margin: 0.5rem 0;
       font-weight: 600;
+      flex-shrink: 0;
     }
 
-    .project-desc {
-      color: #4a627a;
-      font-size: 0.85rem;
-      margin: 0.5rem 0;
-      line-height: 1.5;
-    }
-
-    .project-tech {
+    .project-tech-tags {
       display: flex;
       flex-wrap: wrap;
       gap: 0.4rem;
-      margin-top: 0.8rem;
+      flex-shrink: 0;
     }
-
-    .project-tech span {
+    .project-tech-tags span {
       background: #ecf4fc;
       padding: 0.2rem 0.7rem;
       border-radius: 20px;
@@ -306,30 +267,11 @@
       margin-bottom: 1.5rem;
       border-left: 5px solid #1f6eb0;
     }
-    .exp-company {
-      font-size: 1.45rem;
-      font-weight: 800;
-      color: #0d3552;
-    }
-    .exp-role {
-      font-weight: 600;
-      color: #2b6c9e;
-      margin: 0.2rem 0 0.7rem;
-    }
-    .exp-list {
-      list-style: none;
-      margin-top: 0.6rem;
-    }
-    .exp-list li {
-      margin-bottom: 0.65rem;
-      display: flex;
-      gap: 0.7rem;
-      align-items: baseline;
-    }
-    .exp-list li i {
-      color: #1f6eb0;
-      font-size: 0.7rem;
-    }
+    .exp-company { font-size: 1.45rem; font-weight: 800; color: #0d3552; }
+    .exp-role { font-weight: 600; color: #2b6c9e; margin: 0.2rem 0 0.7rem; }
+    .exp-list { list-style: none; margin-top: 0.6rem; }
+    .exp-list li { margin-bottom: 0.65rem; display: flex; gap: 0.7rem; align-items: baseline; }
+    .exp-list li i { color: #1f6eb0; font-size: 0.7rem; }
 
     .education-card {
       background: #f4fafe;
@@ -351,6 +293,7 @@
       .content { padding: 1.5rem; }
       .hero-card { padding: 1.6rem; }
       .name-row h1 { font-size: 2.4rem; }
+      .project-row { flex-direction: column; align-items: flex-start; }
     }
   </style>
 </head>
@@ -404,156 +347,109 @@
       </div>
     </section>
 
-    <!-- COMPLETE PROJECTS - LAHAT ANDITO PATI RPT SYSTEM -->
+    <!-- PROJECTS - WALANG PICTURE, CLEAN LIST LANG -->
     <section id="projects">
-      <h2><i class="fas fa-folder-open"></i> complete project portfolio</h2>
-      <p style="margin-bottom: 1.5rem; color: #2c577c;">20+ custom systems delivered — each one uniquely built for client requirements.</p>
+      <h2><i class="fas fa-folder-open"></i> project portfolio</h2>
+      <p style="margin-bottom: 1.2rem; color: #2c577c;">20+ custom systems delivered. Here are some of my recent projects:</p>
       
-      <div class="projects-grid">
+      <div class="projects-container">
 
-        <!-- RPT / REAL PROPERTY TAX SYSTEM -->
-        <div class="project-card">
-          <div class="project-img"><i class="fas fa-landmark"></i><span>screenshot</span></div>
-          <div class="project-info">
-            <div class="project-title">RPT Tax Management System</div>
-            <div class="project-category">🏛️ Government / Enterprise</div>
-            <div class="project-desc">Real Property Tax assessment, Tax Declaration processing, Assessment Roll management, Billing & Collection, Penalty computation, Reports generation.</div>
-            <div class="project-tech"><span>Laravel</span><span>Vue</span><span>MySQL</span><span>Quasar</span></div>
-          </div>
+        <div class="project-row">
+          <div class="project-icon"><i class="fas fa-landmark"></i></div>
+          <div class="project-details"><h3>RPT Tax Management System</h3><p>Real Property Tax assessment, Tax Declaration, Assessment Roll, Billing & Collection, Penalty computation</p></div>
+          <div class="project-cat">Government</div>
+          <div class="project-tech-tags"><span>Laravel</span><span>Vue</span><span>MySQL</span></div>
         </div>
 
-        <!-- InventoryTrack -->
-        <div class="project-card">
-          <div class="project-img"><i class="fas fa-boxes"></i><span>screenshot</span></div>
-          <div class="project-info">
-            <div class="project-title">InventoryTrack · Cross-Platform</div>
-            <div class="project-category">🏭 Manufacturing / Wholesale</div>
-            <div class="project-desc">Multi-warehouse inventory, QR scanning, real-time stock, purchase orders, material conversion reports.</div>
-            <div class="project-tech"><span>Laravel</span><span>Vue 3</span><span>Quasar</span><span>MySQL</span></div>
-          </div>
+        <div class="project-row">
+          <div class="project-icon"><i class="fas fa-boxes"></i></div>
+          <div class="project-details"><h3>InventoryTrack · Cross-Platform Suite</h3><p>Multi-warehouse inventory, QR scanning, real-time stock, purchase orders, material conversion</p></div>
+          <div class="project-cat">Manufacturing</div>
+          <div class="project-tech-tags"><span>Laravel</span><span>Vue 3</span><span>Quasar</span><span>MySQL</span></div>
         </div>
 
-        <!-- Proforma Marketing System -->
-        <div class="project-card">
-          <div class="project-img"><i class="fas fa-file-invoice"></i><span>screenshot</span></div>
-          <div class="project-info">
-            <div class="project-title">Proforma Marketing System</div>
-            <div class="project-category">🪑 Furniture Export</div>
-            <div class="project-desc">Product catalog, proforma invoices, job order management, PDF spec sheets, client portals.</div>
-            <div class="project-tech"><span>Laravel</span><span>Vue</span><span>MySQL</span><span>PDF</span></div>
-          </div>
+        <div class="project-row">
+          <div class="project-icon"><i class="fas fa-file-invoice"></i></div>
+          <div class="project-details"><h3>Proforma Marketing System</h3><p>Product catalog, proforma invoices, job order management, PDF spec sheets, client portals</p></div>
+          <div class="project-cat">Furniture Export</div>
+          <div class="project-tech-tags"><span>Laravel</span><span>Vue</span><span>MySQL</span><span>PDF</span></div>
         </div>
 
-        <!-- Telecom Asset Tracking -->
-        <div class="project-card">
-          <div class="project-img"><i class="fas fa-tower-broadcast"></i><span>screenshot</span></div>
-          <div class="project-info">
-            <div class="project-title">Telecom Asset & Inventory</div>
-            <div class="project-category">📡 Telecommunications</div>
-            <div class="project-desc">Inventory control, role-based dashboards, stock movement logs, audit trails for regional telco.</div>
-            <div class="project-tech"><span>Laravel</span><span>jQuery</span><span>MySQL</span></div>
-          </div>
+        <div class="project-row">
+          <div class="project-icon"><i class="fas fa-tower-broadcast"></i></div>
+          <div class="project-details"><h3>Telecom Asset & Inventory</h3><p>Inventory control system, role-based dashboards, stock movement logs, audit trails</p></div>
+          <div class="project-cat">Telecom</div>
+          <div class="project-tech-tags"><span>Laravel</span><span>jQuery</span><span>MySQL</span></div>
         </div>
 
-        <!-- GeoTagging System -->
-        <div class="project-card">
-          <div class="project-img"><i class="fas fa-map-marker-alt"></i><span>screenshot</span></div>
-          <div class="project-info">
-            <div class="project-title">GeoTagging · Fiber Asset Tracker</div>
-            <div class="project-category">🗺️ Telecom / Field Ops</div>
-            <div class="project-desc">Real-time geolocation for fiber endpoints, Leaflet maps, field technician synchronization.</div>
-            <div class="project-tech"><span>Laravel</span><span>JS</span><span>Leaflet</span><span>MySQL</span></div>
-          </div>
+        <div class="project-row">
+          <div class="project-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div class="project-details"><h3>GeoTagging · Fiber Asset Tracker</h3><p>Real-time geolocation for fiber endpoints, Leaflet maps, field technician sync</p></div>
+          <div class="project-cat">Telecom</div>
+          <div class="project-tech-tags"><span>Laravel</span><span>JS</span><span>Leaflet</span><span>MySQL</span></div>
         </div>
 
-        <!-- Collision Detect IoT -->
-        <div class="project-card">
-          <div class="project-img"><i class="fas fa-car-crash"></i><span>screenshot</span></div>
-          <div class="project-info">
-            <div class="project-title">Collision Detect · IoT System</div>
-            <div class="project-category">🚗 IoT / Safety</div>
-            <div class="project-desc">Raspberry Pi + GPS/GSM: collision detection + SMS alert with live location.</div>
-            <div class="project-tech"><span>Python</span><span>RPi</span><span>IoT</span><span>GSM</span></div>
-          </div>
+        <div class="project-row">
+          <div class="project-icon"><i class="fas fa-car-crash"></i></div>
+          <div class="project-details"><h3>Collision Detect · IoT System</h3><p>Raspberry Pi + GPS/GSM: collision detection + SMS alert with live location</p></div>
+          <div class="project-cat">IoT / Safety</div>
+          <div class="project-tech-tags"><span>Python</span><span>RPi</span><span>IoT</span><span>GSM</span></div>
         </div>
 
-        <!-- Online Examination -->
-        <div class="project-card">
-          <div class="project-img"><i class="fas fa-laptop-exam"></i><span>screenshot</span></div>
-          <div class="project-info">
-            <div class="project-title">Online Examination Platform</div>
-            <div class="project-category">📝 Education</div>
-            <div class="project-desc">Remote exam with proctoring, real-time results, admin dashboards, student portals.</div>
-            <div class="project-tech"><span>Laravel</span><span>Vue</span><span>Quasar</span><span>TypeScript</span></div>
-          </div>
+        <div class="project-row">
+          <div class="project-icon"><i class="fas fa-laptop-exam"></i></div>
+          <div class="project-details"><h3>Online Examination Platform</h3><p>Remote exam with proctoring, real-time results, admin dashboards, student portals</p></div>
+          <div class="project-cat">Education</div>
+          <div class="project-tech-tags"><span>Laravel</span><span>Vue</span><span>Quasar</span><span>TypeScript</span></div>
         </div>
 
-        <!-- QrKada Library System -->
-        <div class="project-card">
-          <div class="project-img"><i class="fas fa-qrcode"></i><span>screenshot</span></div>
-          <div class="project-info">
-            <div class="project-title">QrKada · Library Automation</div>
-            <div class="project-category">📚 Civic / Library</div>
-            <div class="project-desc">QR-based borrowing, member tracking, fines management, analytics dashboard.</div>
-            <div class="project-tech"><span>Laravel</span><span>Vue</span><span>MySQL</span><span>QR API</span></div>
-          </div>
+        <div class="project-row">
+          <div class="project-icon"><i class="fas fa-qrcode"></i></div>
+          <div class="project-details"><h3>QrKada · Library Automation</h3><p>QR-based borrowing, member tracking, fines management, analytics dashboard</p></div>
+          <div class="project-cat">Library</div>
+          <div class="project-tech-tags"><span>Laravel</span><span>Vue</span><span>MySQL</span><span>QR API</span></div>
         </div>
 
-        <!-- Less2More Wallet -->
-        <div class="project-card">
-          <div class="project-img"><i class="fas fa-wallet"></i><span>screenshot</span></div>
-          <div class="project-info">
-            <div class="project-title">Less2More · Credit System</div>
-            <div class="project-category">💰 Fintech / Rewards</div>
-            <div class="project-desc">Points-based wallet, admin approval, reward redemption, transaction ledger.</div>
-            <div class="project-tech"><span>PHP</span><span>MySQL</span><span>JS</span></div>
-          </div>
+        <div class="project-row">
+          <div class="project-icon"><i class="fas fa-wallet"></i></div>
+          <div class="project-details"><h3>Less2More · Credit System</h3><p>Points-based wallet, admin approval, reward redemption, transaction ledger</p></div>
+          <div class="project-cat">Fintech</div>
+          <div class="project-tech-tags"><span>PHP</span><span>MySQL</span><span>JS</span></div>
         </div>
 
-        <!-- Feedback & Suggestion System -->
-        <div class="project-card">
-          <div class="project-img"><i class="fas fa-comment-dots"></i><span>screenshot</span></div>
-          <div class="project-info">
-            <div class="project-title">Citizen Feedback Portal</div>
-            <div class="project-category">💬 LGU / Civic</div>
-            <div class="project-desc">Anonymous suggestions, admin moderation, sentiment analysis, public dashboard.</div>
-            <div class="project-tech"><span>PHP</span><span>MySQL</span><span>Bootstrap</span></div>
-          </div>
+        <div class="project-row">
+          <div class="project-icon"><i class="fas fa-comment-dots"></i></div>
+          <div class="project-details"><h3>Citizen Feedback Portal</h3><p>Anonymous suggestions, admin moderation, sentiment analysis, public dashboard</p></div>
+          <div class="project-cat">LGU / Civic</div>
+          <div class="project-tech-tags"><span>PHP</span><span>MySQL</span><span>Bootstrap</span></div>
         </div>
 
-        <!-- Guidance Records System -->
-        <div class="project-card">
-          <div class="project-img"><i class="fas fa-user-graduate"></i><span>screenshot</span></div>
-          <div class="project-info">
-            <div class="project-title">Guidance Records System</div>
-            <div class="project-category">🎓 Education</div>
-            <div class="project-desc">Student counseling logs, behavior tracking, counselor dashboard, session history.</div>
-            <div class="project-tech"><span>PHP</span><span>MySQL</span><span>jQuery</span></div>
-          </div>
+        <div class="project-row">
+          <div class="project-icon"><i class="fas fa-user-graduate"></i></div>
+          <div class="project-details"><h3>Guidance Records System</h3><p>Student counseling logs, behavior tracking, counselor dashboard, session history</p></div>
+          <div class="project-cat">Education</div>
+          <div class="project-tech-tags"><span>PHP</span><span>MySQL</span><span>jQuery</span></div>
         </div>
 
-        <!-- Hotel Reservation -->
-        <div class="project-card">
-          <div class="project-img"><i class="fas fa-hotel"></i><span>screenshot</span></div>
-          <div class="project-info">
-            <div class="project-title">Hotel Reservation System</div>
-            <div class="project-category">🏨 Hospitality</div>
-            <div class="project-desc">Room booking, availability calendar, guest history, reservation management.</div>
-            <div class="project-tech"><span>PHP</span><span>MySQL</span><span>CSS</span></div>
-          </div>
+        <div class="project-row">
+          <div class="project-icon"><i class="fas fa-hotel"></i></div>
+          <div class="project-details"><h3>Hotel Reservation System</h3><p>Room booking, availability calendar, guest history, reservation management</p></div>
+          <div class="project-cat">Hospitality</div>
+          <div class="project-tech-tags"><span>PHP</span><span>MySQL</span><span>CSS</span></div>
         </div>
 
-        <!-- Voucher System -->
-        <div class="project-card">
-          <div class="project-img"><i class="fas fa-ticket-alt"></i><span>screenshot</span></div>
-          <div class="project-info">
-            <div class="project-title">Telecom Voucher Accounting</div>
-            <div class="project-category">🎫 Telecom</div>
-            <div class="project-desc">Voucher generation, redemption tracking, reconciliation for cable TV provider.</div>
-            <div class="project-tech"><span>Laravel</span><span>MySQL</span></div>
-          </div>
+        <div class="project-row">
+          <div class="project-icon"><i class="fas fa-ticket-alt"></i></div>
+          <div class="project-details"><h3>Telecom Voucher Accounting</h3><p>Voucher generation, redemption tracking, reconciliation for cable TV provider</p></div>
+          <div class="project-cat">Telecom</div>
+          <div class="project-tech-tags"><span>Laravel</span><span>MySQL</span></div>
         </div>
 
+      </div>
+
+      <div style="text-align: center; margin-top: 1.5rem;">
+        <span class="badge"><i class="fas fa-plus-circle"></i> More projects available upon request</span>
+        <span class="badge"><i class="fas fa-laptop"></i> Live demos can be arranged</span>
       </div>
     </section>
 
@@ -602,10 +498,11 @@
     <footer class="footer-cta">
       <i class="fas fa-comments" style="font-size: 2rem;"></i>
       <h3 style="margin: 0.8rem 0 0.3rem;">Let's talk about your project</h3>
-      <p>RPT System? Inventory? ERP? Dashboard? Tell me what you need.</p>
+      <p>RPT System? Inventory? ERP? Dashboard? Tell me what you need — I'll build it.</p>
       <div style="margin: 1.2rem 0 0.5rem;">
-        ✉️ <a href="mailto:lesterkingpadrid@gmail.com" style="color:#0f4970; font-weight:600;">lesterkingpadrid@gmail.com</a> &nbsp;| &nbsp; 📞 +63 927 232 4478
+        ✉️ <a href="mailto:lesterkingpadrid@gmail.com" style="color:#0f4970; font-weight:600;">lesterkingpadrid@gmail.com</a> &nbsp;|&nbsp; 📞 +63 927 232 4478
       </div>
+      <p style="margin-top: 1rem; font-size: 0.85rem;">Free consultation · No obligation · Let's discuss your requirements</p>
     </footer>
   </div>
 </div>
