@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Lester King Padrid · Senior Full-Stack Developer</title>
+  <title>Lester King Padrid · System Developer</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
   <style>
@@ -56,64 +56,63 @@
 
     .content { padding: 2rem 2rem; }
 
+    /* HERO SECTION - PICTURE SA KALIWA, TEXT SA KANAN */
     .hero-card {
       background: linear-gradient(135deg, #ffffff 0%, #f8fcff 100%);
       border-radius: 1.5rem;
-      padding: 1.5rem 2rem;
+      padding: 1.8rem;
       margin-bottom: 2rem;
       border: 1px solid #e2effb;
       display: flex;
       flex-wrap: wrap;
-      gap: 1.5rem;
+      gap: 1.8rem;
       align-items: center;
     }
 
-    .hero-left { flex: 2; }
-    .hero-right { 
-      flex: 0 0 120px; 
+    .hero-left { 
+      flex: 0 0 110px; 
       text-align: center;
     }
+    .hero-right { flex: 1; }
 
-    /* PICTURE - INAYOS NA PARA KITA BUONG MUKHA AT BUHOK */
+    /* PICTURE - INAYOS NA PARA KITA BUONG MUKHA */
     .profile-photo {
-      width: 120px;
-      height: 120px;
+      width: 110px;
+      height: 110px;
       border-radius: 50%;
       object-fit: cover;
-      object-position: 50% 20%;
+      object-position: 50% 15%;
       border: 3px solid white;
-      box-shadow: 0 8px 16px -8px rgba(31,110,176,0.25);
+      box-shadow: 0 8px 16px -8px rgba(31,110,176,0.3);
       background: #dce5f0;
-      display: block;
-      margin: 0 auto;
     }
 
     .name-row h1 {
-      font-size: 2.2rem;
+      font-size: 2rem;
       font-weight: 700;
       letter-spacing: -0.02em;
       color: #0b2f4a;
     }
 
     .tagline {
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       font-weight: 500;
       color: #1f5a82;
       margin-top: 0.2rem;
-      border-left: 4px solid #1f6eb0;
+      border-left: 3px solid #1f6eb0;
       padding-left: 0.8rem;
     }
 
     .badge-strip {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.7rem;
-      margin: 0.8rem 0 0.8rem;
+      gap: 0.6rem;
+      margin: 0.7rem 0;
     }
 
     .badge {
       background: #e5f0fa;
-      padding: 0.3rem 0.9rem;
+      padding: 0.25rem 0.8rem;
       border-radius: 50px;
       color: #0c3f60;
       font-weight: 600;
@@ -126,19 +125,19 @@
 
     .highlight-message {
       background: #eef4fc;
-      padding: 0.8rem 1rem;
-      border-radius: 1rem;
-      margin: 0.8rem 0 0.8rem;
-      font-size: 0.85rem;
-      border-left: 4px solid #1f6eb0;
+      padding: 0.7rem 1rem;
+      border-radius: 0.8rem;
+      margin: 0.7rem 0;
+      font-size: 0.8rem;
+      border-left: 3px solid #1f6eb0;
       color: #0c344e;
     }
 
     .info-grid {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.8rem;
-      margin: 0.8rem 0;
+      gap: 0.7rem;
+      margin: 0.7rem 0;
     }
 
     .info-item {
@@ -147,29 +146,29 @@
       display: flex;
       align-items: center;
       gap: 0.4rem;
-      padding: 0.25rem 0.9rem;
+      padding: 0.2rem 0.8rem;
       border: 1px solid #cde3f5;
-      font-size: 0.75rem;
+      font-size: 0.7rem;
     }
-    .info-item i { color: #1f6eb0; width: 18px; font-size: 0.8rem; }
+    .info-item i { color: #1f6eb0; width: 16px; font-size: 0.7rem; }
 
     .contact-links {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.6rem;
-      margin-top: 0.6rem;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
     }
 
     .contact-pill {
       background: #f9fcff;
       border-radius: 30px;
       border: 1px solid #bed7f0;
-      padding: 0.25rem 0.8rem;
+      padding: 0.2rem 0.7rem;
       display: flex;
       align-items: center;
-      gap: 0.35rem;
+      gap: 0.3rem;
       transition: 0.2s;
-      font-size: 0.7rem;
+      font-size: 0.65rem;
     }
 
     .contact-pill a { text-decoration: none; font-weight: 500; color: #1d4e72; }
@@ -198,11 +197,11 @@
     .skill-pill {
       background: #fff;
       border: 1.5px solid #d2e5f7;
-      padding: 0.3rem 0.9rem;
+      padding: 0.25rem 0.9rem;
       border-radius: 40px;
       font-weight: 500;
       color: #114b72;
-      font-size: 0.75rem;
+      font-size: 0.7rem;
       transition: 0.2s;
     }
     .skill-pill:hover { background: #1f6eb0; color: white; }
@@ -274,17 +273,17 @@
       border-left: 4px solid #1f6eb0;
     }
     .exp-company { font-size: 1rem; font-weight: 700; color: #0d3552; }
-    .exp-role { font-weight: 600; color: #2b6c9e; font-size: 0.75rem; margin: 0.2rem 0 0.3rem; }
+    .exp-role { font-weight: 600; color: #2b6c9e; font-size: 0.7rem; margin: 0.2rem 0 0.3rem; }
     .exp-list { list-style: none; margin-top: 0.3rem; }
-    .exp-list li { font-size: 0.75rem; margin-bottom: 0.3rem; display: flex; gap: 0.5rem; }
-    .exp-list li i { color: #1f6eb0; font-size: 0.55rem; margin-top: 0.2rem; }
+    .exp-list li { font-size: 0.7rem; margin-bottom: 0.3rem; display: flex; gap: 0.5rem; }
+    .exp-list li i { color: #1f6eb0; font-size: 0.5rem; margin-top: 0.2rem; }
 
     .education-card {
       background: #f4fafe;
       padding: 0.9rem 1.1rem;
       border-radius: 1rem;
       border: 1px solid #cce0f2;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
     }
 
     .footer-cta {
@@ -297,13 +296,14 @@
 
     @media (max-width: 680px) {
       .content { padding: 1rem; }
-      .hero-card { flex-direction: column; text-align: center; padding: 1.2rem; }
-      .hero-right { flex: auto; margin-top: 0; }
+      .hero-card { flex-direction: column; text-align: center; }
+      .hero-left { flex: auto; }
       .tagline { text-align: left; }
       .badge-strip { justify-content: center; }
       .info-grid { justify-content: center; }
       .contact-links { justify-content: center; }
       .project-row { flex-direction: column; align-items: flex-start; }
+      .highlight-message { text-align: left; }
     }
   </style>
 </head>
@@ -320,6 +320,9 @@
   <div class="content">
     <section id="about" class="hero-card">
       <div class="hero-left">
+        <img src="https://raw.githubusercontent.com/therles26/lesterking.dev/main/lesterkingpadridprofile.jpeg" alt="Lester King Padrid" class="profile-photo">
+      </div>
+      <div class="hero-right">
         <div class="name-row">
           <h1>Lester King G. Padrid</h1>
           <div class="tagline">System Developer · Laravel & Vue/Quasar Expert</div>
@@ -330,7 +333,7 @@
           <span class="badge"><i class="fas fa-building"></i> Gov & Enterprise</span>
         </div>
         <div class="highlight-message">
-          <i class="fas fa-quote-left" style="margin-right: 6px; opacity: 0.7;"></i> 
+          <i class="fas fa-quote-left" style="margin-right: 5px; opacity: 0.7; font-size: 0.7rem;"></i> 
           Detail-oriented and innovative Backend & Frontend Developer with a strong track record of delivering clean, efficient, and scalable code. Proficient in PHP, Laravel, MySQL, JavaScript, TypeScript, Vue.js, and Quasar Framework.
         </div>
         <div class="info-grid">
@@ -344,9 +347,6 @@
           <div class="contact-pill"><i class="fab fa-github"></i> <a href="https://github.com/therles26" target="_blank">github/therles26</a></div>
           <div class="contact-pill"><i class="fas fa-globe"></i> <a href="https://therles26.github.io/lesterking.dev" target="_blank">portfolio</a></div>
         </div>
-      </div>
-      <div class="hero-right">
-        <img src="https://raw.githubusercontent.com/therles26/lesterking.dev/main/lesterkingpadridprofile.jpeg" alt="Lester King Padrid" class="profile-photo">
       </div>
     </section>
 
@@ -364,7 +364,7 @@
 
     <section id="projects">
       <h2><i class="fas fa-folder-open"></i> project portfolio</h2>
-      <p style="font-size: 0.75rem; color: #2c577c; margin-bottom: 0.8rem;">20+ custom systems delivered. Here are some of my projects:</p>
+      <p style="font-size: 0.7rem; color: #2c577c; margin-bottom: 0.8rem;">20+ custom systems delivered. Here are some of my projects:</p>
       
       <div class="projects-container">
         <div class="project-row"><div class="project-icon"><i class="fas fa-landmark"></i></div><div class="project-details"><h3>RPT Tax Management System</h3><p>Real Property Tax assessment, Tax Declaration, Billing & Collection</p></div><div class="project-cat">Gov</div><div class="project-tech"><span>Laravel</span><span>Vue</span><span>MySQL</span></div></div>
@@ -386,34 +386,31 @@
     <section id="experience">
       <h2><i class="fas fa-briefcase"></i> work experience</h2>
       
-      <!-- Calturn - COMPLETE DETAILS -->
       <div class="exp-block">
         <div class="exp-company">Calturn Manufacturing Philippines, Inc.</div>
         <div class="exp-role">System Developer / Programmer (May 2024 – Present)</div>
         <ul class="exp-list">
           <li><i class="fas fa-circle"></i> Designed, developed, and maintained web applications using PHP and the Laravel Framework.</li>
-          <li><i class="fas fa-circle"></i> Built and consumed RESTful APIs to enable seamless communication between frontend and backend services.</li>
+          <li><i class="fas fa-circle"></i> Built and consumed RESTful APIs for seamless frontend-backend communication.</li>
           <li><i class="fas fa-circle"></i> Developed dynamic, responsive Single Page Applications (SPAs) using Vue.js, TypeScript, and Quasar Framework.</li>
-          <li><i class="fas fa-circle"></i> Created structured and optimized MySQL/SQL database schemas, and performed efficient data handling and queries.</li>
+          <li><i class="fas fa-circle"></i> Created optimized MySQL/SQL database schemas and performed efficient data handling.</li>
           <li><i class="fas fa-circle"></i> Implemented secure authentication, role-based access control, and data validation.</li>
           <li><i class="fas fa-circle"></i> Optimized application performance, scalability, and security following best practices.</li>
-          <li><i class="fas fa-circle"></i> Collaborated with cross-functional teams and utilized Git for version control and code collaboration.</li>
+          <li><i class="fas fa-circle"></i> Collaborated with cross-functional teams using Git for version control.</li>
         </ul>
       </div>
 
-      <!-- RA Omega - COMPLETE DETAILS -->
       <div class="exp-block">
         <div class="exp-company">RA Omega Cable TV Corporation</div>
         <div class="exp-role">System Developer / Programmer (Mar 2022 – Mar 2024)</div>
         <ul class="exp-list">
-          <li><i class="fas fa-circle"></i> Deployed functional solutions by creating, adopting, and implementing test plans for quality and integrity of systems.</li>
-          <li><i class="fas fa-circle"></i> Planned short- and long-term delivery objectives for development to keep projects on point with deadlines.</li>
-          <li><i class="fas fa-circle"></i> Provided guidance, support, and training to users on Company Systems, accurately recording all activity and communication within system.</li>
+          <li><i class="fas fa-circle"></i> Deployed functional solutions by creating test plans for quality and integrity of systems.</li>
+          <li><i class="fas fa-circle"></i> Planned short- and long-term delivery objectives to meet project deadlines.</li>
+          <li><i class="fas fa-circle"></i> Provided guidance, support, and training to users on Company Systems.</li>
           <li><i class="fas fa-circle"></i> Built geo-tagging system for fiber assets, inventory platforms, and voucher systems.</li>
         </ul>
       </div>
 
-      <!-- R.D. Talens -->
       <div class="exp-block">
         <div class="exp-company">R.D. Talens Construction and Trading</div>
         <div class="exp-role">Administration Office (Nov 2018 – Dec 2021)</div>
@@ -425,7 +422,6 @@
         </ul>
       </div>
 
-      <!-- Freelance -->
       <div class="exp-block">
         <div class="exp-company">Freelance Full‑Stack Developer</div>
         <div class="exp-role">Self-employed (2020 – present)</div>
@@ -449,8 +445,8 @@
     <footer class="footer-cta">
       <i class="fas fa-comments" style="font-size: 1.2rem;"></i>
       <h3 style="margin: 0.4rem 0 0.2rem; font-size: 1rem;">Let's talk about your project</h3>
-      <p style="font-size: 0.75rem;">RPT System? Inventory? ERP? Dashboard? Tell me what you need — I'll build it.</p>
-      <div style="margin-top: 0.5rem; font-size: 0.75rem;">✉️ <a href="mailto:lesterkingpadrid@gmail.com" style="color:#0f4970;">lesterkingpadrid@gmail.com</a> &nbsp;|&nbsp; 📞 +63 927 232 4478</div>
+      <p style="font-size: 0.7rem;">RPT System? Inventory? ERP? Dashboard? Tell me what you need — I'll build it.</p>
+      <div style="margin-top: 0.5rem; font-size: 0.7rem;">✉️ <a href="mailto:lesterkingpadrid@gmail.com" style="color:#0f4970;">lesterkingpadrid@gmail.com</a> &nbsp;|&nbsp; 📞 +63 927 232 4478</div>
     </footer>
   </div>
 </div>
