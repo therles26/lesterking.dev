@@ -69,19 +69,24 @@
     }
 
     .hero-left { flex: 2; }
-    .hero-right { flex: 0 0 130px; text-align: center; }
+    .hero-right { 
+      flex: 0 0 130px; 
+      text-align: center;
+      align-self: center;
+    }
 
-    /* PICTURE ADJUSTMENT - PARA KITA BUONG MUKHA AT BUHOK */
+    /* PICTURE - INAYOS NA POSITION PARA PANTAY SA TEXT */
     .profile-photo {
       width: 130px;
       height: 130px;
       border-radius: 50%;
       object-fit: cover;
-      /* adjust mo to: 35% = balance lang, 40% = pababa, 30% = pataas */
-      object-position: 50% 35%;
+      object-position: 50% 30%;
       border: 3px solid white;
       box-shadow: 0 8px 16px -8px rgba(31,110,176,0.25);
       background: #dce5f0;
+      display: block;
+      margin: 0 auto;
     }
 
     .name-row h1 {
@@ -293,7 +298,7 @@
     @media (max-width: 680px) {
       .content { padding: 1rem; }
       .hero-card { flex-direction: column; text-align: center; padding: 1.2rem; }
-      .hero-right { flex: auto; }
+      .hero-right { flex: auto; margin-top: 0; }
       .tagline { text-align: left; }
       .badge-strip { justify-content: center; }
       .info-grid { justify-content: center; }
