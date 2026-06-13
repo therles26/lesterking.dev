@@ -67,14 +67,8 @@
       align-items: center;
     }
 
-    .hero-left {
-      flex: 2;
-    }
-
-    .hero-right {
-      flex: 0 0 140px;
-      text-align: center;
-    }
+    .hero-left { flex: 2; }
+    .hero-right { flex: 0 0 140px; text-align: center; }
 
     .profile-photo {
       width: 140px;
@@ -317,7 +311,6 @@
       .name-row h1 { font-size: 2.4rem; }
       .tagline { text-align: left; }
       .project-row { flex-direction: column; align-items: flex-start; }
-      .project-tech-tags { margin-top: 0.5rem; }
       .hero-right { flex: auto; }
     }
   </style>
@@ -362,8 +355,8 @@
         </div>
       </div>
       <div class="hero-right">
-        <!-- PALITAN MO ITO NG ACTUAL PICTURE MO -->
-        <img src="https://via.placeholder.com/140x140?text=YOUR+PHOTO" alt="Lester King Padrid" class="profile-photo" id="profileImg">
+        <!-- GAMITIN MO ITO - YUNG RAW URL NG PICTURE MO -->
+        <img src="https://raw.githubusercontent.com/therles26/lesterking.dev/main/lesterkingpadridprofile.jpeg" alt="Lester King Padrid" class="profile-photo">
         <p style="font-size: 0.7rem; color: #6c8faa; margin-top: 0.5rem;">Lester King Padrid</p>
       </div>
     </section>
@@ -385,98 +378,84 @@
       <p style="margin-bottom: 1.2rem; color: #2c577c;">20+ custom systems delivered. Here are some of my projects:</p>
       
       <div class="projects-container">
-
         <div class="project-row">
           <div class="project-icon"><i class="fas fa-landmark"></i></div>
           <div class="project-details"><h3>RPT Tax Management System</h3><p>Real Property Tax assessment, Tax Declaration, Assessment Roll, Billing & Collection, Penalty computation</p></div>
           <div class="project-cat">Government</div>
           <div class="project-tech-tags"><span>Laravel</span><span>Vue</span><span>MySQL</span></div>
         </div>
-
         <div class="project-row">
           <div class="project-icon"><i class="fas fa-boxes"></i></div>
           <div class="project-details"><h3>InventoryTrack · Cross-Platform Suite</h3><p>Multi-warehouse inventory, QR scanning, real-time stock, purchase orders, material conversion</p></div>
           <div class="project-cat">Manufacturing</div>
           <div class="project-tech-tags"><span>Laravel</span><span>Vue 3</span><span>Quasar</span><span>MySQL</span></div>
         </div>
-
         <div class="project-row">
           <div class="project-icon"><i class="fas fa-file-invoice"></i></div>
           <div class="project-details"><h3>Proforma Marketing System</h3><p>Product catalog, proforma invoices, job order management, PDF spec sheets, client portals</p></div>
           <div class="project-cat">Furniture Export</div>
           <div class="project-tech-tags"><span>Laravel</span><span>Vue</span><span>MySQL</span><span>PDF</span></div>
         </div>
-
         <div class="project-row">
           <div class="project-icon"><i class="fas fa-tower-broadcast"></i></div>
           <div class="project-details"><h3>Telecom Asset & Inventory</h3><p>Inventory control system, role-based dashboards, stock movement logs, audit trails</p></div>
           <div class="project-cat">Telecom</div>
           <div class="project-tech-tags"><span>Laravel</span><span>jQuery</span><span>MySQL</span></div>
         </div>
-
         <div class="project-row">
           <div class="project-icon"><i class="fas fa-map-marker-alt"></i></div>
           <div class="project-details"><h3>GeoTagging · Fiber Asset Tracker</h3><p>Real-time geolocation for fiber endpoints, Leaflet maps, field technician sync</p></div>
           <div class="project-cat">Telecom</div>
           <div class="project-tech-tags"><span>Laravel</span><span>JS</span><span>Leaflet</span><span>MySQL</span></div>
         </div>
-
         <div class="project-row">
           <div class="project-icon"><i class="fas fa-car-crash"></i></div>
           <div class="project-details"><h3>Collision Detect · IoT System</h3><p>Raspberry Pi + GPS/GSM: collision detection + SMS alert with live location</p></div>
           <div class="project-cat">IoT / Safety</div>
           <div class="project-tech-tags"><span>Python</span><span>RPi</span><span>IoT</span><span>GSM</span></div>
         </div>
-
         <div class="project-row">
           <div class="project-icon"><i class="fas fa-laptop-exam"></i></div>
           <div class="project-details"><h3>Online Examination Platform</h3><p>Remote exam with proctoring, real-time results, admin dashboards, student portals</p></div>
           <div class="project-cat">Education</div>
           <div class="project-tech-tags"><span>Laravel</span><span>Vue</span><span>Quasar</span><span>TypeScript</span></div>
         </div>
-
         <div class="project-row">
           <div class="project-icon"><i class="fas fa-qrcode"></i></div>
           <div class="project-details"><h3>QrKada · Library Automation</h3><p>QR-based borrowing, member tracking, fines management, analytics dashboard</p></div>
           <div class="project-cat">Library</div>
           <div class="project-tech-tags"><span>Laravel</span><span>Vue</span><span>MySQL</span><span>QR API</span></div>
         </div>
-
         <div class="project-row">
           <div class="project-icon"><i class="fas fa-wallet"></i></div>
           <div class="project-details"><h3>Less2More · Credit System</h3><p>Points-based wallet, admin approval, reward redemption, transaction ledger</p></div>
           <div class="project-cat">Fintech</div>
           <div class="project-tech-tags"><span>PHP</span><span>MySQL</span><span>JS</span></div>
         </div>
-
         <div class="project-row">
           <div class="project-icon"><i class="fas fa-comment-dots"></i></div>
           <div class="project-details"><h3>Citizen Feedback Portal</h3><p>Anonymous suggestions, admin moderation, sentiment analysis, public dashboard</p></div>
           <div class="project-cat">LGU / Civic</div>
           <div class="project-tech-tags"><span>PHP</span><span>MySQL</span><span>Bootstrap</span></div>
         </div>
-
         <div class="project-row">
           <div class="project-icon"><i class="fas fa-user-graduate"></i></div>
           <div class="project-details"><h3>Guidance Records System</h3><p>Student counseling logs, behavior tracking, counselor dashboard, session history</p></div>
           <div class="project-cat">Education</div>
           <div class="project-tech-tags"><span>PHP</span><span>MySQL</span><span>jQuery</span></div>
         </div>
-
         <div class="project-row">
           <div class="project-icon"><i class="fas fa-hotel"></i></div>
           <div class="project-details"><h3>Hotel Reservation System</h3><p>Room booking, availability calendar, guest history, reservation management</p></div>
           <div class="project-cat">Hospitality</div>
           <div class="project-tech-tags"><span>PHP</span><span>MySQL</span><span>CSS</span></div>
         </div>
-
         <div class="project-row">
           <div class="project-icon"><i class="fas fa-ticket-alt"></i></div>
           <div class="project-details"><h3>Telecom Voucher Accounting</h3><p>Voucher generation, redemption tracking, reconciliation for cable TV provider</p></div>
           <div class="project-cat">Telecom</div>
           <div class="project-tech-tags"><span>Laravel</span><span>MySQL</span></div>
         </div>
-
       </div>
 
       <div style="text-align: center; margin-top: 1.5rem;">
@@ -547,13 +526,5 @@
     </footer>
   </div>
 </div>
-
-<script>
-  // PARA MAPALITAN MO YUNG PLACEHOLDER NG ACTUAL PICTURE MO
-  // OPTION 1: Palitan mo directly yung src sa img tag sa itaas
-  // OPTION 2: I-uncomment to at lagay mo path ng picture mo
-  
-  // document.getElementById('profileImg').src = 'your-actual-photo.jpg';
-</script>
 </body>
 </html>
