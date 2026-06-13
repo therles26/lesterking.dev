@@ -3,10 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Lester King Padrid · Senior Web Developer · Portfolio</title>
-  <!-- Font Awesome 6 (free) -->
+  <title>Lester King Padrid · Senior Full-Stack Developer</title>
+  <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <!-- Google Fonts: Inter + fallback -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
   <style>
     * {
@@ -16,7 +15,7 @@
     }
 
     body {
-      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
       background: #f4f9fe;
       color: #0a1c2f;
       line-height: 1.5;
@@ -24,11 +23,9 @@
       padding-top: 82px;
     }
 
-    /* modern glassmorphic navigation */
     nav {
-      background: rgba(255, 255, 255, 0.92);
+      background: rgba(255, 255, 255, 0.94);
       backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
       box-shadow: 0 8px 24px -8px rgba(0, 32, 64, 0.12);
       padding: 0.8rem 2rem;
       position: fixed;
@@ -50,13 +47,11 @@
       padding: 0.45rem 0.1rem;
       border-bottom: 2px solid transparent;
       transition: 0.2s ease;
-      letter-spacing: -0.2px;
     }
 
     nav a:hover {
       border-bottom-color: #1f6eb0;
       color: #073458;
-      transform: translateY(-1px);
     }
 
     .container {
@@ -72,7 +67,6 @@
       padding: 2.5rem 3rem 2rem;
     }
 
-    /* Hero / about section – employer-first, no Calfurn project mention */
     .hero-card {
       background: linear-gradient(125deg, #ffffff 0%, #f1f8ff 100%);
       border-radius: 2rem;
@@ -80,7 +74,6 @@
       margin-bottom: 2rem;
       border: 1px solid #e2effb;
       box-shadow: 0 12px 28px -12px rgba(17, 51, 85, 0.12);
-      transition: all 0.2s;
     }
 
     .name-row h1 {
@@ -123,11 +116,6 @@
       border: 1px solid #c2dcf5;
     }
 
-    .badge i {
-      font-size: 0.9rem;
-      color: #1f6eb0;
-    }
-
     .highlight-message {
       background: #eef4fc;
       padding: 1.7rem 2rem;
@@ -154,7 +142,6 @@
       gap: 0.9rem;
       padding: 0.5rem 1.8rem 0.5rem 1.2rem;
       border: 1px solid #cde3f5;
-      box-shadow: 0 6px 12px -8px rgba(0,0,0,0.03);
     }
 
     .stat-number {
@@ -207,7 +194,6 @@
       color: white;
     }
 
-    /* section styles */
     h2 {
       font-size: 2rem;
       font-weight: 700;
@@ -247,65 +233,82 @@
       transform: translateY(-2px);
     }
 
-    /* project cards (freelance only - no Calturn mention) */
-    .project-list {
-      display: flex;
-      flex-direction: column;
-      gap: 1.6rem;
-    }
-    .project-entry {
-      background: #fafdff;
-      border-radius: 1.8rem;
-      padding: 1.6rem 2rem;
-      border: 1px solid #deedfa;
-      transition: all 0.2s;
-    }
-    .project-entry:hover {
-      border-color: #1f6eb0;
-      box-shadow: 0 16px 24px -16px rgba(31,110,176,0.18);
-      background: white;
-    }
-    .project-title {
-      font-size: 1.65rem;
-      font-weight: 700;
-      color: #0b2f48;
-      letter-spacing: -0.3px;
-    }
-    .project-meta {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      margin: 0.5rem 0 0.8rem;
-      color: #527f9e;
-      font-size: 0.85rem;
-      font-weight: 500;
-    }
-    .freelance-badge {
-      background: #e2eff9;
-      padding: 0.2rem 0.8rem;
-      border-radius: 28px;
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.3px;
-      text-transform: uppercase;
-      color: #1f5e8a;
-    }
-    .tech-stack {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-top: 1rem;
-    }
-    .tech-label {
-      background: #ecf4fc;
-      border-radius: 30px;
-      padding: 0.25rem 1rem;
-      font-size: 0.75rem;
-      font-weight: 500;
-      color: #0c4a72;
+    /* Freelance services section - customizable approach */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.8rem;
+      margin: 1.5rem 0;
     }
 
-    /* Experience cards — includes current role? we respect current employment but no specific Calturn project leak */
+    .service-card {
+      background: #fafdff;
+      border-radius: 1.8rem;
+      padding: 2rem;
+      border: 1px solid #deedfa;
+      transition: all 0.25s;
+      text-align: center;
+    }
+
+    .service-card:hover {
+      border-color: #1f6eb0;
+      box-shadow: 0 16px 28px -16px rgba(31,110,176,0.2);
+      transform: translateY(-4px);
+    }
+
+    .service-icon {
+      background: #e8f0fe;
+      width: 70px;
+      height: 70px;
+      border-radius: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.2rem;
+    }
+    .service-icon i {
+      font-size: 2rem;
+      color: #1f6eb0;
+    }
+    .service-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.8rem;
+      color: #0b2f48;
+    }
+    .service-card p {
+      color: #4a627a;
+      margin-bottom: 1.2rem;
+    }
+    .tech-stack-mini {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+    .tech-stack-mini span {
+      background: #ecf4fc;
+      padding: 0.2rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: #1f5e8a;
+    }
+
+    .customize-note {
+      background: #eef4fc;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      margin: 2rem 0 0;
+      text-align: center;
+      border: 1px dashed #1f6eb0;
+    }
+    .customize-note i {
+      font-size: 1.8rem;
+      color: #1f6eb0;
+      margin-bottom: 0.5rem;
+    }
+
     .exp-block {
       background: #f6fbfe;
       border-radius: 1.8rem;
@@ -355,20 +358,6 @@
       color: #114a6e;
     }
 
-    @media (max-width: 780px) {
-      .content {
-        padding: 1.6rem;
-      }
-      .hero-card {
-        padding: 1.6rem;
-      }
-      .name-row h1 {
-        font-size: 2.4rem;
-      }
-      nav {
-        gap: 1.2rem;
-      }
-    }
     .note-current {
       font-size: 0.85rem;
       margin-top: 0.8rem;
@@ -378,9 +367,13 @@
       border-radius: 30px;
       color: #a66907;
     }
-    hr {
-      margin: 0.5rem 0;
-      border-color: #cfe0ef;
+
+    @media (max-width: 780px) {
+      .content { padding: 1.6rem; }
+      .hero-card { padding: 1.6rem; }
+      .name-row h1 { font-size: 2.4rem; }
+      nav { gap: 1.2rem; }
+      .services-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -388,35 +381,33 @@
 <nav>
   <a href="#about">about</a>
   <a href="#skills">tech stack</a>
-  <a href="#projects">freelance work</a>
+  <a href="#freelance">freelance</a>
   <a href="#experience">experience</a>
   <a href="#education">education</a>
 </nav>
 
 <div class="container">
   <div class="content">
-    <!-- about section: no Calturn manufacturing project description, only professional summary -->
     <section id="about" class="hero-card">
       <div class="name-row">
         <h1>Lester King G. Padrid</h1>
-        <div class="tagline">Senior Full‑Stack Developer · Laravel & Vue/Quasar Specialist</div>
+        <div class="tagline">Senior Full‑Stack Developer · Laravel & Vue/Quasar Expert</div>
       </div>
       <div class="badge-strip">
-        <span class="badge"><i class="fas fa-calendar-alt"></i> 7+ years exp.</span>
-        <span class="badge"><i class="fas fa-laptop-code"></i> 20+ production systems</span>
+        <span class="badge"><i class="fas fa-calendar-alt"></i> 7+ years experience</span>
+        <span class="badge"><i class="fas fa-laptop-code"></i> 20+ successful deliveries</span>
         <span class="badge"><i class="fas fa-mobile-alt"></i> SPA · PWA · IoT ready</span>
       </div>
       <div class="highlight-message">
-        <i class="fas fa-quote-left" style="margin-right: 10px; opacity: 0.8;"></i> 
-        I design and deliver business-critical web platforms — from inventory ecosystems and real-time dashboards to ERP modules. 
-        My focus: clean Laravel backends, type-safe Vue/TypeScript frontends, and performance-first architecture.
+        <i class="fas fa-quote-left" style="margin-right: 10px;"></i> 
+        I build custom, scalable web applications tailored exactly to your business needs. 
+        Every project is unique — I work closely with clients to understand their workflow and deliver solutions that truly fit.
       </div>
 
-      <!-- trust signals & contact -->
       <div class="stats-grid">
-        <div class="stat-card"><span class="stat-icon-circle"><i class="fas fa-rocket"></i></span> <span><span class="stat-number">100%</span><br>client retention</span></div>
-        <div class="stat-card"><span class="stat-icon-circle"><i class="fas fa-database"></i></span> <span><span class="stat-number">50+</span><br>DB schemas</span></div>
-        <div class="stat-card"><span class="stat-icon-circle"><i class="fas fa-globe"></i></span> <span><span class="stat-number">4</span><br>industries served</span></div>
+        <div class="stat-card"><span class="stat-icon-circle"><i class="fas fa-smile"></i></span> <span><span class="stat-number">100%</span><br>client satisfaction</span></div>
+        <div class="stat-card"><span class="stat-icon-circle"><i class="fas fa-clock"></i></span> <span><span class="stat-number">48h</span><br>typical response</span></div>
+        <div class="stat-card"><span class="stat-icon-circle"><i class="fas fa-sync-alt"></i></span> <span><span class="stat-number">flexible</span><br>customization</span></div>
       </div>
 
       <div class="contact-links">
@@ -425,174 +416,136 @@
         <div class="contact-pill"><i class="fab fa-github"></i> <a href="https://github.com/therles26" target="_blank">github/therles26</a></div>
         <div class="contact-pill"><i class="fas fa-briefcase"></i> <a href="https://therles26.github.io/lesterking.dev" target="_blank">portfolio</a></div>
       </div>
-      <!-- status note: currently employed at Calturn Manufacturing (respectful, no internal projects shown) -->
+
       <div class="note-current">
-        <i class="fas fa-check-circle" style="color:#1f6eb0;"></i> ✅ Currently employed at Calturn Manufacturing Philippines Inc. as System Developer (May 2024–Present) — full‑stack lead for internal ERP & real‑time tools.
+        <i class="fas fa-check-circle" style="color:#1f6eb0;"></i> ✅ Currently at Calturn Manufacturing (May 2024–Present) — available for freelance & side projects
       </div>
-      <p style="margin-top: 1.2rem; font-size: 0.95rem; border-top: 1px solid #d1e4f3; padding-top: 1rem;">
-        <i class="fas fa-bullhorn"></i> <strong>Open for career discussions, challenging projects, or freelance collaborations</strong> — my portfolio below highlights independent freelance work only, respecting current employer confidentiality.
-      </p>
     </section>
 
-    <!-- SKILLS section -->
     <section id="skills">
-      <h2><i class="fas fa-microchip"></i> core competencies</h2>
+      <h2><i class="fas fa-microchip"></i> technical toolkit</h2>
       <div class="skills-container">
         <span class="skill-pill">PHP / Laravel</span><span class="skill-pill">Vue.js (2/3)</span>
         <span class="skill-pill">Quasar Framework</span><span class="skill-pill">TypeScript</span>
-        <span class="skill-pill">JavaScript (ES6+)</span><span class="skill-pill">MySQL / SQL</span>
-        <span class="skill-pill">REST API Design</span><span class="skill-pill">HTML5 / CSS3 / Tailwind</span>
-        <span class="skill-pill">Git & GitHub Flow</span><span class="skill-pill">Python (RPi / IoT)</span>
-        <span class="skill-pill">jQuery</span><span class="skill-pill">SPA Architecture</span>
-        <span class="skill-pill">Role-based access</span><span class="skill-pill">Raspberry Pi</span>
+        <span class="skill-pill">JavaScript ES6+</span><span class="skill-pill">MySQL / SQL</span>
+        <span class="skill-pill">REST API</span><span class="skill-pill">HTML5 / CSS3</span>
+        <span class="skill-pill">Git & GitHub</span><span class="skill-pill">Python / IoT</span>
+        <span class="skill-pill">jQuery</span><span class="skill-pill">Responsive Design</span>
       </div>
     </section>
 
-    <!-- FREELANCE PROJECTS (No Calturn projects, only independent work) -->
-    <section id="projects">
-      <h2><i class="fas fa-code-branch"></i> selected freelance & independent projects</h2>
-      <div class="project-list">
-        <div class="project-entry">
-          <div class="project-title">📦 InventoryTrack · cross-platform suite</div>
-          <div class="project-meta"><i class="far fa-calendar-alt"></i> 2024–2025 <span class="freelance-badge">freelance enterprise</span></div>
-          <p>Multi-warehouse inventory, QR scanning, real-time stock movements, purchase orders & material conversion. Used by wholesaler.</p>
-          <div class="tech-stack"><span class="tech-label">Laravel</span><span class="tech-label">Vue 3</span><span class="tech-label">Quasar</span><span class="tech-label">MySQL</span><span class="tech-label">TypeScript</span></div>
+    <!-- FREELANCE SECTION - customizable, client-driven approach -->
+    <section id="freelance">
+      <h2><i class="fas fa-hand-sparkles"></i> freelance · built for you</h2>
+      <p style="margin-bottom: 1.5rem; font-size: 1.05rem; color: #2c577c;">
+        I don't believe in one-size-fits-all. Every client has unique needs — I customize each solution from scratch 
+        based on your specific workflow, industry, and goals.
+      </p>
+      
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-boxes"></i></div>
+          <h3>Inventory & ERP Systems</h3>
+          <p>Custom inventory management, purchase orders, stock tracking, reporting dashboards — tailored to your business size.</p>
+          <div class="tech-stack-mini"><span>Laravel</span><span>Vue</span><span>MySQL</span><span>Quasar</span></div>
         </div>
-        <div class="project-entry">
-          <div class="project-title">🪑 Proforma Marketing System (Furniture Export)</div>
-          <div class="project-meta"><i class="far fa-calendar-alt"></i> 2024 <span class="freelance-badge">freelance</span></div>
-          <p>Product catalog + proforma invoicing + job order mgmt. Integrated PDF spec sheets & client portals.</p>
-          <div class="tech-stack"><span class="tech-label">Laravel</span><span class="tech-label">Vue</span><span class="tech-label">Quasar</span><span class="tech-label">MySQL</span></div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+          <h3>Business Portals & Dashboards</h3>
+          <p>Real-time analytics, role-based access, data visualization, admin panels — exactly as you envision.</p>
+          <div class="tech-stack-mini"><span>Vue</span><span>TypeScript</span><span>Laravel</span><span>REST API</span></div>
         </div>
-        <div class="project-entry">
-          <div class="project-title">📡 Telecom Material & Asset Tracking</div>
-          <div class="project-meta"><i class="far fa-calendar-alt"></i> 2023 <span class="freelance-badge">contract</span></div>
-          <p>Inventory control system for regional telco: role based dashboards, stock movement logs & audit trails.</p>
-          <div class="tech-stack"><span class="tech-label">Laravel</span><span class="tech-label">MySQL</span><span class="tech-label">jQuery</span></div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+          <h3>Mobile-Ready SPAs & PWAs</h3>
+          <p>Cross-platform web apps that work on desktop, tablet, and mobile — progressive web app ready.</p>
+          <div class="tech-stack-mini"><span>Quasar</span><span>Vue</span><span>PWA</span><span>Responsive</span></div>
         </div>
-        <div class="project-entry">
-          <div class="project-title">📍 GeoTagging · Fiber asset tracker (GPS maps)</div>
-          <div class="project-meta"><i class="far fa-calendar-alt"></i> 2022 <span class="freelance-badge">telecom</span></div>
-          <p>Real-time geolocation for fiber endpoints & routers, Leaflet maps, field technician sync.</p>
-          <div class="tech-stack"><span class="tech-label">Laravel</span><span class="tech-label">JavaScript</span><span class="tech-label">MySQL</span><span class="tech-label">Leaflet</span></div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-microchip"></i></div>
+          <h3>IoT & Hardware Integration</h3>
+          <p>Raspberry Pi, sensors, GPS/GSM modules — custom IoT solutions with web dashboards.</p>
+          <div class="tech-stack-mini"><span>Python</span><span>RPi</span><span>Laravel</span><span>WebSocket</span></div>
         </div>
-        <div class="project-entry">
-          <div class="project-title">🚗 Collision Detect · IoT safety system (RPi)</div>
-          <div class="project-meta"><i class="far fa-calendar-alt"></i> 2022 <span class="freelance-badge">prototype</span></div>
-          <p>Raspberry Pi + GPS/GSM — collision detection + live SMS alert with location. Python backend.</p>
-          <div class="tech-stack"><span class="tech-label">Python</span><span class="tech-label">RPi.GPIO</span><span class="tech-label">IoT</span><span class="tech-label">GSM</span></div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-file-invoice"></i></div>
+          <h3>Invoicing & Document Systems</h3>
+          <p>Proforma invoices, job orders, quotations, PDF generation — automated document workflows.</p>
+          <div class="tech-stack-mini"><span>Laravel</span><span>PDF</span><span>MySQL</span><span>Vue</span></div>
         </div>
-        <div class="project-entry">
-          <div class="project-title">📝 Online Examination (web + android PWA)</div>
-          <div class="project-meta"><i class="far fa-calendar-alt"></i> 2022 <span class="freelance-badge">education</span></div>
-          <p>Remote exam platform with real‑time proctoring, automatic results, admin dashboards.</p>
-          <div class="tech-stack"><span class="tech-label">Laravel</span><span class="tech-label">Vue</span><span class="tech-label">Quasar</span><span class="tech-label">TypeScript</span></div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-graduation-cap"></i></div>
+          <h3>Educational & Exam Platforms</h3>
+          <p>Online exams, student portals, learning management, progress tracking — fully customizable.</p>
+          <div class="tech-stack-mini"><span>Laravel</span><span>Vue</span><span>MySQL</span><span>Quasar</span></div>
         </div>
-        <div class="project-entry">
-          <div class="project-title">📚 QrKada – Library automation (QR borrowing)</div>
-          <div class="project-meta"><i class="far fa-calendar-alt"></i> 2022 <span class="freelance-badge">civic tech</span></div>
-          <p>Community library system: QR checkout, member tracking, fines & analytics dashboard.</p>
-          <div class="tech-stack"><span class="tech-label">Laravel</span><span class="tech-label">Vue</span><span class="tech-label">MySQL</span><span class="tech-label">QRcode API</span></div>
-        </div>
-        <div class="project-entry">
-          <div class="project-title">💰 Less2More · internal credit & wallet</div>
-          <div class="project-meta"><i class="far fa-calendar-alt"></i> 2022 <span class="freelance-badge">fintech</span></div>
-          <p>Points-based wallet with admin approval, reward redemption, transaction ledger.</p>
-          <div class="tech-stack"><span class="tech-label">PHP</span><span class="tech-label">MySQL</span><span class="tech-label">JavaScript</span></div>
-        </div>
-        <div class="project-entry">
-          <div class="project-title">💬 Citizen feedback & suggestion portal (LGU)</div>
-          <div class="project-meta"><i class="far fa-calendar-alt"></i> 2021 <span class="freelance-badge">civic</span></div>
-          <p>Anonymous suggestion system, admin moderation, sentiment analysis (basic).</p>
-          <div class="tech-stack"><span class="tech-label">PHP</span><span class="tech-label">MySQL</span><span class="tech-label">Bootstrap</span></div>
-        </div>
-        <div class="project-entry">
-          <div class="project-title">🎓 Guidance records system (college)</div>
-          <div class="project-meta"><i class="far fa-calendar-alt"></i> 2020 <span class="freelance-badge">education</span></div>
-          <p>Student counselling logs, behavior tracking, counselor dashboard.</p>
-          <div class="tech-stack"><span class="tech-label">PHP</span><span class="tech-label">MySQL</span><span class="tech-label">jQuery</span></div>
-        </div>
-        <div class="project-entry">
-          <div class="project-title">🏨 Hotel reservation & booking engine</div>
-          <div class="project-meta"><i class="far fa-calendar-alt"></i> 2017–2018 <span class="freelance-badge">thesis + commercial</span></div>
-          <p>Complete booking system: room availability, guest history, reservation calendar & email confirmations.</p>
-          <div class="tech-stack"><span class="tech-label">PHP</span><span class="tech-label">MySQL</span><span class="tech-label">CSS</span></div>
-        </div>
-        <div class="project-entry">
-          <div class="project-title">🎫 Telecom Voucher & Accounting system</div>
-          <div class="project-meta"><span class="freelance-badge">freelance</span></div>
-          <p>Voucher generation, redemption & reconciliation for cable TV provider.</p>
-          <div class="tech-stack"><span class="tech-label">Laravel</span><span class="tech-label">MySQL</span></div>
+      </div>
+
+      <div class="customize-note">
+        <i class="fas fa-magic"></i>
+        <h3 style="margin: 0.5rem 0;">✨ Completely customized to your needs</h3>
+        <p>Whether you need a simple CRUD app, a complex multi-warehouse system, or something completely unique —<br>
+        I'll listen to your requirements, suggest the best tech stack, and build exactly what you need.<br>
+        <strong>No templates. No copy-paste. Just tailor-made solutions.</strong></p>
+        <div style="margin-top: 1rem;">
+          <span class="badge"><i class="fas fa-comment"></i> Free consultation</span>
+          <span class="badge"><i class="fas fa-chalkboard"></i> Requirements analysis</span>
+          <span class="badge"><i class="fas fa-code"></i> Custom development</span>
         </div>
       </div>
     </section>
 
-    <!-- PROFESSIONAL EXPERIENCE — Calturn is listed as current, but no internal projects exposed, just title -->
+    <!-- PROFESSIONAL EXPERIENCE -->
     <section id="experience">
-      <h2><i class="fas fa-briefcase"></i> career timeline</h2>
+      <h2><i class="fas fa-briefcase"></i> professional journey</h2>
       
       <div class="exp-block">
         <div class="exp-company">Calturn Manufacturing Philippines, Inc.</div>
-        <div class="exp-role">System Developer / Programmer  (May 2024 – Present)</div>
+        <div class="exp-role">System Developer / Programmer (May 2024 – Present)</div>
         <ul class="exp-list">
-          <li><i class="fas fa-circle"></i> Developing enterprise-grade web applications with Laravel + Vue/Quasar SPA architecture.</li>
-          <li><i class="fas fa-circle"></i> Building & optimizing REST APIs, real-time data modules, and role-based access controls.</li>
-          <li><i class="fas fa-circle"></i> Database design, query optimization (MySQL), and performance tuning for manufacturing workflows.</li>
-          <li><i class="fas fa-circle"></i> Collaborating with internal teams using Git & agile practices. </li>
+          <li><i class="fas fa-circle"></i> Enterprise web apps with Laravel + Vue/Quasar SPA architecture.</li>
+          <li><i class="fas fa-circle"></i> REST API development, real-time modules, RBAC implementation.</li>
+          <li><i class="fas fa-circle"></i> Database optimization and manufacturing workflow automation.</li>
         </ul>
-        <p style="font-size:0.85rem; color:#31749e; margin-top:6px;"><i class="fas fa-shield-alt"></i> *Current employment — internal projects remain confidential, only high-level responsibilities shown</p>
       </div>
 
       <div class="exp-block">
         <div class="exp-company">RA Omega Cable TV Corporation</div>
-        <div class="exp-role">System Developer / Programmer (Mar 2022 – Mar 2024)</div>
+        <div class="exp-role">System Developer (Mar 2022 – Mar 2024)</div>
         <ul class="exp-list">
-          <li><i class="fas fa-circle"></i> Implemented full-cycle solutions: geo-tagging system for fiber assets, inventory trackers & voucher platforms.</li>
-          <li><i class="fas fa-circle"></i> Provided user training, documentation, and system integrity monitoring.</li>
-          <li><i class="fas fa-circle"></i> Improved operational reporting efficiency by 35% using Laravel-based reporting modules.</li>
+          <li><i class="fas fa-circle"></i> Geo-tagging system for fiber assets, inventory platforms, voucher systems.</li>
+          <li><i class="fas fa-circle"></i> User training, documentation, and system integrity monitoring.</li>
         </ul>
       </div>
 
       <div class="exp-block">
-        <div class="exp-company">R.D. Talens Construction and Trading</div>
-        <div class="exp-role">Administration Officer / Timekeeper (Nov 2018 – Dec 2021)</div>
+        <div class="exp-company">Freelance Full‑Stack Developer</div>
+        <div class="exp-role">Self-employed (2022 – present)</div>
         <ul class="exp-list">
-          <li><i class="fas fa-circle"></i> Digitized material inventory & manpower logs (custom PHP/MySQL tool).</li>
-          <li><i class="fas fa-circle"></i> Procurement, site inventory coordination, and daily activity monitoring.</li>
-          <li><i class="fas fa-circle"></i> Built internal timekeeping system that reduced manual errors.</li>
-        </ul>
-      </div>
-
-      <div class="exp-block">
-        <div class="exp-company">Freelance Full‑stack Developer</div>
-        <div class="exp-role">Self-employed (2022 – present · concurrent)</div>
-        <ul class="exp-list">
-          <li><i class="fas fa-circle"></i> Delivered 15+ end‑to‑end web apps for manufacturing, logistics, education, and telecom sectors.</li>
-          <li><i class="fas fa-circle"></i> Modern stack: Laravel, Vue/Quasar, TypeScript, MySQL, and deployment.</li>
-          <li><i class="fas fa-circle"></i> 100% client satisfaction — long term support & agile delivery.</li>
+          <li><i class="fas fa-circle"></i> 15+ custom web apps for manufacturing, logistics, education, and telecom sectors.</li>
+          <li><i class="fas fa-circle"></i> End-to-end delivery: requirements → development → deployment → support.</li>
+          <li><i class="fas fa-circle"></i> Flexible engagement: one-time projects, long-term maintenance, or hourly support.</li>
         </ul>
       </div>
     </section>
 
-    <!-- EDUCATION -->
     <section id="education">
       <h2><i class="fas fa-graduation-cap"></i> education</h2>
       <div class="education-card">
-        <strong style="font-size: 1.4rem;">Bachelor of Science in Information Technology</strong><br>
-        <span style="font-weight: 500;">Nueva Ecija University of Science and Technology</span> · June 2014 – April 2018<br>
-        Major in Web Application Programming · Cabanatuan City, Philippines
+        <strong style="font-size: 1.4rem;">BS Information Technology</strong><br>
+        Nueva Ecija University of Science and Technology · 2014 – 2018<br>
+        Major in Web Application Programming · Cabanatuan City
       </div>
     </section>
 
-    <!-- footer call to action -->
     <footer class="footer-cta">
-      <i class="fas fa-envelope-open-text" style="font-size: 1.8rem; opacity: 0.8;"></i>
-      <h3 style="margin: 0.5rem 0 0.2rem;">Let’s build something robust</h3>
-      <p>Looking for a senior developer who combines product thinking with clean code? Open for full-time, part-time, or premium freelance opportunities.</p>
-      <div style="margin: 1rem 0 0.2rem;">
+      <i class="fas fa-comments" style="font-size: 2rem; opacity: 0.8;"></i>
+      <h3 style="margin: 0.8rem 0 0.3rem;">Let's talk about your project</h3>
+      <p>Tell me what you need — I'll build it exactly the way you want.</p>
+      <div style="margin: 1.2rem 0 0.5rem;">
         ✉️ <a href="mailto:lesterkingpadrid@gmail.com" style="color:#0f4970; font-weight:600;">lesterkingpadrid@gmail.com</a> &nbsp;|&nbsp; 📞 +63 927 232 4478
       </div>
-      <p style="margin-top: 0.8rem; font-size: 0.8rem;"><i class="fas fa-laptop-code"></i> Full portfolio available upon request — Live demos & GitHub repositories.</p>
+      <p style="margin-top: 1rem; font-size: 0.85rem;">Free consultation · No obligation · Let's discuss your requirements</p>
     </footer>
   </div>
 </div>
